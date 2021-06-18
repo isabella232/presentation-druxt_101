@@ -33,18 +33,20 @@ image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
 # Stuart Clark
 
 <div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
-  <ri-briefcase-line class="opacity-50"/>
+  <mdi-briefcase class="opacity-50" />
   <div><a href="https://realityloop" target="_blank">Realityloop.com</a></div>
-  <ri-github-line class="opacity-50"/>
+  <mdi-drupal class="opacity-50" />
+  <div><a href="https://www.drupal.org/u/Deciphered" target="_blank">Deciphered</a></div>
+  <mdi-github class="opacity-50" />
   <div><a href="https://github.com/decipher" target="_blank">Decipher</a></div>
-  <ri-open-source-line class="opacity-50"/>
+  <mdi-nuxt class="opacity-50" />
   <div><a href="https://druxtjs.org" target="_blank">DruxtJS.org</a></div>
-  <ri-earth-line class="opacity-50"/>
+  <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>
 
 <!--
-@todo Add Druplicon / Drupal.org line
+@todo Add Realityloop logo
 
 * Senior Decoupled Developer @ Realityloop in Australia
 * Deciphered @ Drupal.org (~15years)
@@ -256,10 +258,11 @@ layout: center
   <div><a href="http://localhost:3000" target="_blank">localhost:3000</a></div>
 </div>
 
-
 <!--
-
-Run a local demo of the Druxt Umami frontend: https://github.com/druxt/demo.druxtjs.org
+1. Live production demo
+2. Local demo of https://github.com/druxt/demo.druxtjs.org
+   - Use Vue Dev tools.
+   - Walkthrough a few of the components.
 -->
 
 ---
@@ -370,15 +373,68 @@ DruxtSite uses the available Druxt modules to provide an out of the box Drupal s
 
 ---
 layout: center
+class: text-center
 ---
 
 # Let's play
+
+## (Round 1)
+
+<!--
+1. Show Page
+2. Open VueDevTools > Routes
+3. Delete `pages/index.vue`
+4. Reveal no content.
+5. Create content.
+6. Reveal content.
+7. Show node page
+8. Recap
+-->
+
+---
+
+<div class="grid grid-cols-[2fr,3fr] gap-4">
+  <div class="text-sm">
+
+# Pages
+
+The pages directory contains your application views and routes. Nuxt.js reads all the .vue files inside this directory and automatically creates the router configuration for you.
+
+[nuxtjs.org/docs/2.x/directory-structure/pages](https://nuxtjs.org/docs/2.x/directory-structure/pages)
+
+  </div>
+  <div>
+
+```vue
+<!-- pages/campaign.vue -->
+<template>
+  <article>
+    <DruxtBlock id="@todo" />
+    <div class="grid grid-cols-[2fr,2fr] gap-4">
+      <DruxtEntity type="node--article" :uuid="featuredArticle" />
+      <DruxtView />
+    </div>
+  </article>
+</template>
+
+<script>
+export default {
+  layout: 'landing',
+  computed: {
+    featuredArticle: () => '@todo',
+  }
+}
+</script>
+```
+
+  </div>
+</div>
 
 ---
 layout: center
 ---
 
-<div class="grid grid-cols-[2fr,2fr] gap-4">
+<div class="grid grid-cols-[2fr,3fr] gap-4">
   <div class="pb-4 text-center">
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
     <div class="mb-2 text-sm">
@@ -386,7 +442,7 @@ layout: center
       <a href="https://router.druxtjs.org" target="_blank">router.druxtjs.org</a>
     </div>
     <div class="opacity-50 mb-2 text-sm">
-      Out of the box, Decoupled Drupal site experience.
+      Simple decoupled Drupal routing for Nuxt.
     </div>
     <div class="text-center">
       <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
@@ -394,27 +450,34 @@ layout: center
   </div>
 
   <div class="border-l border-gray-400 border-opacity-25 my-auto pb-4 pl-8">
-    <div class="mb-2 text-sm">
-      <h2>Nuxt.js pages</h2>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      The pages directory contains your application views and routes. Nuxt.js reads all the .vue files inside this directory and automatically creates the router configuration for you.
-    </div>
 
-  ### tl;dr
-  ```
-  rm pages/index.vue
-  ```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
+sequenceDiagram
+  autonumber
+  Nuxt->>+VueRouter: Request page
+  alt Wildcard route
+    VueRouter->>+DruxtRouter: Fallback to DruxtRouter
+    DruxtRouter->>+druxtRouterStore: getRoute()
+    alt MISS
+      druxtRouterStore->>+Decoupled Router: /router/translate-path?path=
+      Decoupled Router->>-druxtRouterStore: Resolved route
+    end
+    druxtRouterStore->>-DruxtRouter: Resolved route
+    DruxtRouter->>-VueRouter: Resolved component
+  end
+  VueRouter->>-Nuxt: Return page
+```
 
   </div>
 </div>
 
 <!--
-The DruxtRouter module installs a wildcard route into your Nuxt application, but still supports standard Nuxt Page routes.
-
-This enables custom pages to co-exist with Drupal routes.
+The DruxtRouter module installs a wildcard route into your Nuxt application, while respecting standard Nuxt pages.
 
 The default Index page can be deleted, allowing the DruxtRouter to serve the homepage route.
+
+DruxtRouter uses a Vuex store to cache queries made against the Drupal Decoupled Router module.
 -->
 
 ---
@@ -422,40 +485,95 @@ layout: center
 ---
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="pb-4">
+  <div class="border-l border-gray-400 border-opacity-25 pb-4 pl-8 text-sm">
     
-  ## Nuxt.js layouts
+  ## Layouts
 
   You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified. Make sure to add the `<Nuxt>` component when creating a layout to actually include the page component.
 
+  [nuxtjs.org/docs/2.x/directory-structure/layouts](https://nuxtjs.org/docs/2.x/directory-structure/layouts)
+
   </div>
-  <div class="border-l border-gray-400 border-opacity-25 my-auto pb-4 pl-8">
+  <div class="pb-4 text-sm">
 
-  ## DruxtSite component
+  ## Nuxt
 
-  The DruxtSite component renders a Drupal site using Block regions for the specified theme.
+  The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
-  ```vue
-  <DruxtSite :theme="theme" />
-  ```
+  [nuxtjs.org/docs/2.x/features/nuxt-components](https://nuxtjs.org/docs/2.x/features/nuxt-components)
 
-  **layouts/default.vue**
-  ```vue
-  <template>
-    <div>
-      <DruxtSite theme="bartik" />
-    </div>
-  </template>
-  ```
+  </div>
+  <div class="border-l border-gray-400 border-opacity-25 pb-4 pl-8 text-sm">
+
+  ## Block regions
+
+  The `<DruxtSite>` component renders all the available Drupal Block regions for the specified theme.
+  
+  The `<DruxtBlockRegion>` components will render any visible Blocks, including the System Main Block (if placed), which renders the `<Nuxt>` component.
+
+  [site.druxtjs.org/api/components/DruxtSite](https://site.druxtjs.org/api/components/DruxtSite.html)
 
   </div>
 </div>
 
+<!--
+Nuxt provides a default layout which will render the `<Nuxt />` component, which will render the `<DruxtRouter />` component.
+
+Replace the `<Nuxt />` component with the `<DruxtSite />` component or manually add the `<DruxtBlockRegion />` components to render Blocks.
+-->
+
+---
+layout: center
+---
+
+# TL;DR
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div>
+
+### 1. Delete pages
+
+```
+rm pages/index.vue
+```
+
+  </div>
+  <div>
+
+### 2. Add DruxtSite to layout
+
+```vue
+<template>
+  <DruxtSite theme="bartik" />
+</template>
+```
+
+  </div>
+</div>
+
+<!-- @todo -->
+
+---
+layout: center
+---
+
+# Do the thing
+
+<!--
+1. Delete `/pages/index.vue`
+2. Add `<DruxtSite theme="bartik" />` to `/layouts/default.vue`
+3. Demo
+4. Add Article
+5. Clear cache
+-->
+
+---
+background: /images/components.png
+class: text-center
+layout: cover
 ---
 
 # Theming
-
-@todo
 
 ---
 
