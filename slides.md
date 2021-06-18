@@ -177,7 +177,7 @@ layout: center
 layout: center
 ---
 
-# Demo
+# Demo?
 
 <!--
 I want to jump into a demo, but ...
@@ -372,8 +372,9 @@ DruxtSite uses the available Druxt modules to provide an out of the box Drupal s
 -->
 
 ---
-layout: center
+background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
+layout: cover
 ---
 
 # Let's play
@@ -481,6 +482,130 @@ DruxtRouter uses a Vuex store to cache queries made against the Drupal Decoupled
 -->
 
 ---
+layout: cover
+class: text-center
+---
+
+# TL;DR
+
+<div class="bg-gray-100 p-2 rounded">
+
+## rm pages/index.vue
+
+</div>
+
+---
+background: /images/components.png
+class: text-center
+layout: cover
+---
+
+# Theming
+
+
+---
+
+# Theming
+
+## Slots and Wrappers
+
+```vue {all|1-7|9-19|21-26|3,4,16|11,13}
+<template>
+  <BCard>
+    <h2>{{ entity.attributes.title }}</h2>
+    <slot name="body" />
+    <BButton :to="link" variant="success">Read more</BButton>
+  </BCard>
+</template>
+
+<script>
+import { BButton, BCard } from 'bootstrap-vue'
+import { DruxtEntityMixin } from 'druxt-entity'
+export default {
+  mixins: [DruxtEntityMixin],
+  components: { BButton, BCard },
+  computed: {
+    link: ({ entity }) => entity.attributes.path.alias || `/node/${entity.attributes.drupal_internal__nid}`,
+  },
+}
+</script>
+
+<style scoped>
+h2 {
+  color: #007bff;
+}
+</style>
+```
+
+<!--
+Druxt provides wrapper components for theming the modules.
+
+A wrapper is just a Vue component:
+- Template: `.tpl.php/.twig` HTML + Components, Slots and Mustache templates.
+- Script: `.js` Vue & Nuxt data, props, methods, etc
+- Style: `.css` Multi-lingual, scope, PostCSS processing
+
+Each module provides slots and $attrs as well as a mixin to register props.
+
+Example: `druxt/entity/node/article/teaser.vue`
+-->
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# Make with the theming
+
+## (Round 2)
+
+<!--
+1. Inspect DruxtEntity with VueDevTools
+2. Show data > component > options.
+3. Create `druxt/entity/node/articles/Teaser.vue`
+
+    ```vue
+    <template>
+      <BCard>
+        <h2>{{ entity.attributes.title }}</h2>
+        <slot name="body" />
+        <BButton :to="link" variant="success">Read more</BButton>
+      </BCard>
+    </template>
+
+    <script>
+    import { BButton, BCard } from 'bootstrap-vue'
+    import { DruxtEntityMixin } from 'druxt-entity'
+    export default {
+      mixins: [DruxtEntityMixin],
+      components: { BButton, BCard },
+      computed: {
+        link: ({ entity }) => entity.attributes.path.alias || `/node/${entity.attributes.drupal_internal__nid}`,
+      },
+    }
+    </script>
+
+    <style scoped>
+    h2 {
+      color: #007bff;
+    }
+    </style>
+    ```
+
+4. Navigate to node
+5. ...storybook
+-->
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# Storybook
+
+---
 layout: center
 ---
 
@@ -523,100 +648,16 @@ Replace the `<Nuxt />` component with the `<DruxtSite />` component or manually 
 -->
 
 ---
-layout: center
----
-
-# TL;DR
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div>
-
-### 1. Delete pages
-
-```
-rm pages/index.vue
-```
-
-  </div>
-  <div>
-
-### 2. Add DruxtSite to layout
-
-```vue
-<template>
-  <DruxtSite theme="bartik" />
-</template>
-```
-
-  </div>
-</div>
-
-<!-- @todo -->
-
----
-layout: center
----
-
-# Do the thing
-
-<!--
-1. Delete `/pages/index.vue`
-2. Add `<DruxtSite theme="bartik" />` to `/layouts/default.vue`
-3. Demo
-4. Add Article
-5. Clear cache
--->
-
----
-background: /images/components.png
-class: text-center
-layout: cover
----
-
-# Theming
-
----
-
-# Single File Component (.vue)
-
-```vue {all|1-7|9-18|20-25}
-<template>
-  <BCard>
-    <h1>{{ title }}</h1>
-    <slot name="field_image" />
-    <slot name="body" />
-  </BCard>
-</template>
-
-<script>
-import { BCard } from 'bootstrap-vue'
-
-export default {
-  components: { BCard },
-  computed: {
-    title: ({ $attrs }) => $attrs.entity.attributes.title,
-  },
-}
-</script>
-
-<style lang="scss" scoped>
-h1 {
-  @apply text-4xl;
-}
-</style>
-```
-
-<!--
-- Template: `.tpl.php/.twig` HTML + Components, Slots and Mustache templates.
-- Script: `.js` Vue & Nuxt data, props, methods, etc
-- Style: `.css` Multi-lingual, scope, PostCSS processing
--->
-
----
 
 # Modules
 
 @todo list all modules + module version
+
+---
+
+# Contribute
+
+@todo Add links to project issue queues / boards / issues
 
 ---
 
