@@ -2,10 +2,10 @@
 import { computed, defineProps } from 'vue'
 
 const props = defineProps({
-  src: {
+  class: {
     type: String,
   },
-  class: {
+  video: {
     type: String,
   },
 })
@@ -17,7 +17,7 @@ const props = defineProps({
       <slot />
     </div>
     <video controls class="w-full w-full">
-      <source :src="src">
+      <source :src="video">
     </video>
   </div>
 </template>

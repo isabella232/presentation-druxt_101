@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { computed, defineProps } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps({
-  src: {
+  class: {
     type: String,
   },
-  class: {
+  video: {
     type: String,
   },
 })
@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
   <div class="grid grid-cols-2 w-full h-full">
     <video controls class="w-full w-full">
-      <source :src="src">
+      <source :src="video">
     </video>
     <div class="slidev-layout default" :class="props.class">
       <slot />
