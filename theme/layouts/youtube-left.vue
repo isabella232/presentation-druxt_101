@@ -10,7 +10,7 @@ const props = defineProps({
   },
 })
 
-const src = computed(() => `https://www.youtube.com/embed/${props.id}`)
+const src = computed(() => `https://www.youtube.com/embed/${props.id}?rel=0`)
 </script>
 
 <template>

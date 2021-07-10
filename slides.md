@@ -337,8 +337,8 @@ layout: center
 -->
 
 ---
-layout: video-right
-video: /video/umami-demo.mp4
+layout: youtube-right
+id: R6eM3JQ_pv8
 class: text-sm
 ---
 
@@ -391,8 +391,8 @@ layout: cover
 ## with DruxtSite
 
 ---
-layout: video-left
-video: /video/drupal-9-quickstart.mp4
+layout: youtube-left
+id: PQcTyIpdHsk
 ---
 
 <img class="h-15 absolute right-15" src="https://www.drupal.org/files/EL_blue_RGB%281%29.png">
@@ -436,8 +436,8 @@ A permission is provided for READ ONLY access to JSON:API endpoints required by 
 -->
 
 ---
-layout: video-right
-video: /video/nuxt-druxt-site-quickstart.mp4
+layout: youtube-right
+id: aWoQRb4F3FY
 ---
 
 <img class="h-15 absolute left-90" src="https://nuxtjs.org/logos/nuxt.svg">
@@ -744,8 +744,8 @@ layout: cover
 # Storybook
 
 ---
-layout: video-right
-video: /video/druxt-nuxt-storybook.mp4
+layout: youtube-right
+id: ek8BlCghwkE
 ---
 
 <img class="h-15 absolute left-95" src="https://raw.githubusercontent.com/storybookjs/brand/master/icon/icon-storybook-default.svg">
