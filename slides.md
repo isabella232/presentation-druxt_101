@@ -78,11 +78,12 @@ layout: center
   </div>
   <div class="!all:leading-12 !all:list-none my-auto">
 
-  - Node and Drupal module(s)
+  - Drupal and Node module(s)
   - Drupal JSON:API client
   - Modular Vue.js component library
   - Vuex resource and collection cache
   - SPA / SSG / SSR
+  - Fully Decoupled first
 
   </div>
 </div>
@@ -92,17 +93,15 @@ layout: center
 
 What is Druxt?
 
-An open source framework for building Fully Decoupled Drupal integrations with Nuxt.js
+An open source framework for building Fully Decoupled Drupal integrations with Nuxt
 
-- Drupal module for quickstart and additional features.
-- Drupal JSON:API Client
-- Modular Vue component library system
-- Vuex store based caching system
+- It is Drupal and Node Modules.
+- it's aDrupal JSON:API Client
+- a Modular Vue component library system with a Vuex store based caching system
   - Partial resources
-  - Dehydration of collection and included resources
-- Support lots of Acronyms; SPA / SSG / SSR
-
-### Is not (only) for out of the box Drupal Site experience.
+  - Dehydration of both collection and included resources
+- It can be used for Single Page Applications, Static Site Generation, Server Side Rendering and a combination of the lot.
+- Fully decoupled first, possibly progressively too.
 -->
 
 ---
@@ -138,7 +137,7 @@ layout: center
 </div>
 
 <!--
-Druxt works with both Drupal 8 and 9, and can work on existing sites and distributions, including ContentaCMS.
+Druxt works with both Drupal 8 and 9, and can work on existing sites and distributions, including but not limited to ContentaCMS and Tide.
 -->
 
 ---
@@ -178,10 +177,13 @@ layout: center
 </div>
 
 <!--
-The Druxt module is ideally a temporary measure, and all things it does should be handled by Drupal core!
+The Druxt module is ideally a temporary measure, and all things it does could be handled by Drupal core in the future.
 
-- Enables required modules
-- Adds permission for required resources
+- Enables required modules:
+  - Decoupled router
+  - JSON:API Menu Items at the moment, however it will also support the Drupal Decoupled Menu Initiative solution in the future.
+  - JSON:API Views (beta release).
+- Adds a Read-only permission for required resources
 - Adds bypass for block condition plugin system to allow for decoupled blocks
 - Enables CORS
 -->
@@ -221,7 +223,7 @@ layout: center
 </div>
 
 <!--
-Druxt is built off of Vue and Nuxt, making it an Intuitive, Progressive, Decoupled Drupal framework.
+Druxt is Vue.js 2 and Nuxt.js 2, and support will be added for Vue 3 and Nuxt 3 in the future.
 -->
 
 ---
@@ -278,6 +280,10 @@ layout: center
   </div>
 </div>
 
+<!--
+And Druxt comprises of 8 notable core modules, such as DruxtBlocks, DruxtViews and DruxtEntity, with more to come in the future.
+-->
+
 ---
 layout: cover
 class: text-center
@@ -287,18 +293,44 @@ class: text-center
 
 ## Druxt = DRUpal + nUXT
 
+<!--
+TL;DR, Druxt is Drupal plus Nuxt, it's as simple as that.
+-->
+
 ---
 layout: center
 ---
 
-# Demo?
+# Table of Contents
+
+1. DruxtSite - Umami Parity project
+2. Getting started with DruxtSite
+3. Themeing (DruxtWrapper)
+4. Blocks & Regions
+5. Storybook
+6. SPA
+7. SSG
 
 <!--
-I want to jump into a demo, but ...
+Druxt is a big project, and there is a lot to talk about.
 
-Druxt is a framework. The best way to demo a framework is to demo an implementation.
+In case we are unable to cover everything today, checkout the slides in your own time.
 
-## ...DuxtSite
+Any topics you wish to prioritise, please let Brian know in the chat or via the poll.
+-->
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# DruxtSite
+
+## Umami Parity project
+
+<!--
+Let's get started with the DruxtSite Umami Parity project.
 -->
 
 ---
