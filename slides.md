@@ -330,7 +330,7 @@ layout: cover
 ## Umami Parity project
 
 <!--
-Let's get started with the DruxtSite Umami Parity project.
+Let's get started with the DruxtSite and the Umami Parity project.
 -->
 
 ---
@@ -355,9 +355,10 @@ layout: center
 
   - Decoupled router
   - Drupal powered Entity, Fields and Forms
-  - Blocks and regions
+  - Blocks and Regions
   - ~~Vuews~~ Views
   - Menus, Breadcrumbs, etc
+  - Reactive content editing
 
   </div>
 </div>
@@ -365,7 +366,15 @@ layout: center
 <!--
 # DruxtSite
 
-### Is for out of the box, Decoupled Drupal site experiences.
+Druxt is not necessarily for out of the box Drupal sites but the DruxtSite module is.
+
+It provides:
+- a Decoupled router
+- Drupal powered Entity, Fields and Forms
+- Blocks and Regions
+- Views, Menus, Breadcrumbs, and more
+
+And as Druxt is Reactive by default, it supports inline content editing via the `v-model` directive.
 -->
 
 ---
@@ -374,11 +383,13 @@ id: R6eM3JQ_pv8
 class: text-sm
 ---
 
-# Umami Parity Demo
+# Umami Parity project
 
-[demo.druxtjs.org](https://demo.druxtjs.org)
+<div class="mb-10" />
 
-<div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
+<div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
+  <ri-cloud-line class="opacity-50"/>
+  <div><a href="https://demo.druxtjs.org" target="_blank">demo.druxtjs.org</a></div>
   <ri-artboard-line class="opacity-50"/>
   <div><a href="http://umami-storybook.druxtjs.org" target="_blank">umami-storybook.druxtjs.org</a></div>
   <ri-github-line class="opacity-50"/>
@@ -389,27 +400,21 @@ class: text-sm
 
 <!--
 @todo Add Umami logo on slide and improve layout / style
--->
 
----
-layout: center
----
+[Click play]
 
-# Live demo
+This is the Umami Parity project, it's my testing ground and goal posts for the Druxt 1.0 release.
 
-<div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
-  <ri-cloud-line class="opacity-50"/>
-  <div><a href="https://demo.druxtjs.org" target="_blank">demo.druxtjs.org</a></div>
-  <ri-home-line class="opacity-50"/>
-  <div><a href="http://localhost:3001" target="_blank">localhost:3001</a></div>
-</div>
+The Backend is a standard Drupal Umami profile install, with the Druxt module and some minor customisations.
 
-<!--
-1. Live production demo
-2. Local demo of https://github.com/druxt/demo.druxtjs.org
-   - `PORT=3001 npm run dev`
-   - Use Vue Dev tools.
-   - Walkthrough a few of the components.
+The Frontend is an instance of the DruxtSite module using the BootstrapVue UI framework and custom DruxtWrapper theme components.
+
+The source code is all available on github, so be sure to check it out.
+
+Let's take a quick walk through of the site:
+- The site is hosted on Amazee's Lagoon
+- It's serving Full Statically generated HTML, which Nuxt hydrates to provide client-side navigation.
+- Layout components can be used for modern UX offerings.
 -->
 
 ---
