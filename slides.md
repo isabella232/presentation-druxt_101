@@ -487,26 +487,12 @@ DruxtSite uses the available Druxt modules to provide an out of the box Drupal s
 -->
 
 ---
-layout: image-left-position
-position: top center
-image: /images/nuxt-welcome.png
----
-
-# Welcome to Nuxt
-
-### Quickstart
-
-```bash
-rm components/*.vue pages/index.vue
-```
-
----
-background: /images/drupal-cms.png
+background: /images/nuxt-welcome.png
 class: text-center
 layout: cover
 ---
 
-# Let's play
+# Welcome to ~~Nuxt~~ Druxt
 
 ## (Round 1)
 
@@ -578,7 +564,39 @@ layout: center
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
-    <img class="h-25 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <div class="mb-2 text-sm">
+      <h1>DruxtViews</h1>
+      <a href="https://views.druxtjs.org" target="_blank">views.druxtjs.org</a>
+    </div>
+    <div class="opacity-50 mb-2 text-sm">
+      Drupal Views Vue.js components for Nuxt.js
+    </div>
+    <div class="text-center">
+      <a class="!border-none" href="https://www.npmjs.com/package/druxt-views" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-views?label=druxt-views" alt="NPM version"></a>
+    </div>
+  </div>
+  <div class="pb-4 pl-8">
+
+```jsx
+<DruxtView
+  :display-id="displayId"
+  :view-id="viewId"
+/>
+```
+
+![Example DruxtView component](/images/druxt-views-page.png)
+
+  </div>
+</div>
+
+---
+layout: center
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="pb-4 text-center">
+    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
     <div class="mb-2 text-sm">
       <h1>DruxtEntity</h1>
       <a href="https://entity.druxtjs.org" target="_blank">entity.druxtjs.org</a>
@@ -606,6 +624,42 @@ layout: center
 </div>
 
 ---
+background: /images/drupal-cms.png
+class: text-center
+layout: cover
+---
+
+# Content & Configuration
+
+## (Round 2)
+
+---
+image: /images/components.png
+layout: image-right-position
+position: left
+---
+
+<div class="pb-4 text-center">
+  <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+  <div class="mb-2 text-sm">
+    <h1>DruxtSchema</h1>
+    <a href="https://schema.druxtjs.org" target="_blank">schema.druxtjs.org</a>
+  </div>
+  <div class="opacity-50 mb-2 text-sm">
+    Entity Form and View mode schemas for Drupal driven frontends.
+  </div>
+  <div class="text-center">
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-schema" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-schema?label=druxt-schema" alt="NPM version"></a>
+  </div>
+</div>
+
+<!--
+Builds all schema files during Nuxt build step.
+
+Currently requires restart to regeneate schemas :(
+-->
+
+---
 background: /images/components.png
 class: text-center
 layout: cover
@@ -613,14 +667,13 @@ layout: cover
 
 # Theming
 
-## (Part 1)
-
+## DruxtWrapper
 
 ---
 
 # Theming
 
-### Slots and Wrappers
+### Slots & Wrappers
 
 ```vue {all|1-7|9-15|17-21}
 <template>
@@ -723,9 +776,9 @@ class: text-center
 layout: cover
 ---
 
-# Make with the theming
+# Prettification
 
-## (Round 2)
+## (Round 3)
 
 <!--
 1. Inspect DruxtEntity with VueDevTools
@@ -734,6 +787,50 @@ layout: cover
 4. Navigate to node
 5. ...storybook
 -->
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# Blocks & Regions
+
+---
+layout: center
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="pb-4 text-center">
+    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <div class="mb-2 text-sm">
+      <h1>DruxtBlocks</h1>
+      <a href="https://blocks.druxtjs.org" target="_blank">blocks.druxtjs.org</a>
+    </div>
+    <div class="opacity-50 mb-2 text-sm">
+      Provides Drupal blocks and region components.
+    </div>
+    <div class="text-center">
+      <a class="!border-none" href="https://www.npmjs.com/package/druxt-blocks" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-blocks?label=druxt-blocks" alt="NPM version"></a>
+    </div>
+  </div>
+  <div class="pb-4 pl-8">
+
+```jsx
+<DruxtBlock :id="drupal_internal__id" />
+```
+
+```jsx
+<DruxtBlockRegion 
+  :name="name"
+  :theme="theme"
+/>
+```
+
+![Example DruxtBlockRegion component](/images/druxt-block-region.png)
+
+  </div>
+</div>
 
 ---
 background: /images/umami-storybook.png
@@ -811,9 +908,9 @@ class: text-center
 layout: cover
 ---
 
-# Story driven design
+# Story time
 
-(Round 3)
+## (Round 4)
 
 <!--
 1. Open Storybook > Entity > Node > Article > View displays > Docs
