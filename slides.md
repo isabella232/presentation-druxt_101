@@ -298,7 +298,7 @@ layout: center
 </div>
 
 <!--
-And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth.
+And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth, and DruxtWordpress.
 
 You can also create your own custom modules by extending the DruxtModule component.
 -->
