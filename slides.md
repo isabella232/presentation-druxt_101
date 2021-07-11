@@ -34,7 +34,7 @@ image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
 
 <div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
   <mdi-briefcase class="opacity-50" />
-  <div><a href="https://realityloop" target="_blank">Realityloop.com</a></div>
+  <div><a href="https://www.realityloop.com" target="_blank">Realityloop.com</a></div>
   <mdi-drupal class="opacity-50" />
   <div><a href="https://www.drupal.org/u/Deciphered" target="_blank">Deciphered</a></div>
   <mdi-github class="opacity-50" />
@@ -56,6 +56,23 @@ With me today is ...
 
 @todo Put Brian and me on half/quater slide?
 -->
+
+---
+layout: image-left
+image: https://secure.gravatar.com/avatar/dd0e29f8a76a2481b2bfec40e69f749f?s=800
+---
+# Brian Gilbert
+
+<div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
+  <mdi-briefcase class="opacity-50" />
+  <div><a href="https://www.realityloop.com" target="_blank">Realityloop.com</a></div>
+  <mdi-drupal class="opacity-50" />
+  <div><a href="https://www.drupal.org/u/realityloop" target="_blank">realityloop</a></div>
+  <mdi-github class="opacity-50" />
+  <div><a href="https://github.com/BrianGilbert" target="_blank">BrianGilbert</a></div>
+  <mdi-earth class="opacity-50"/>
+  <div>Australia</div>
+</div>
 
 ---
 layout: center
