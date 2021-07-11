@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
@@ -27,9 +28,11 @@
 </div>
 
 <!--
-In this case, the route is the Drupal Frontpage View, so the DruxtView module is used to render this route.
+In this case, the route is the Drupal Frontpage View, so the DruxtView module is used to render the page.
 
 The DruxtView component can also be used in a standard Nuxt page or Vue component.
 
 It requires a View ID or UUID, and an optional Display ID.
+
+All configuration is managed in the Drupal backend, but the Frontend developer has access to the configuration, pagination, filters, sorts and more via the DruxtWrapper slots system.
 -->

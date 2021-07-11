@@ -1,3 +1,4 @@
+
 <div class="pb-4 text-center">
   <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
   <div class="mb-2 text-sm">
@@ -13,7 +14,7 @@
 </div>
 
 <!--
-Builds all schema files during Nuxt build step.
+The DruxtSchema module generates a schema file for each Content Entity Resource type per View and Form Display modes.
 
-Currently requires restart to regeneate schemas :(
+The files are currently only generated during the Druxt build cycle, but live regeneration will be added in a future release.
 -->

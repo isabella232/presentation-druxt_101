@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
@@ -26,3 +27,11 @@
 
   </div>
 </div>
+
+<!--
+The DruxtEntity module displays a Drupal content entity using Drupal's Display modes and field configuration.
+
+The DruxtEntity component requires the Entity UUID, resource type and an optional display mode.
+
+It also supports Form schemas for content editing via the schemaType property, as well as the DruxtEntityForm component
+-->

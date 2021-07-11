@@ -39,5 +39,5 @@ An open source framework for building Fully Decoupled Drupal integrations with N
   - Partial resources
   - Dehydration of both collection and included resources
 - It can be used for Single Page Applications, Static Site Generation, Server Side Rendering and a combination of the lot.
-- Fully decoupled first, possibly progressively too.
+- Fully decoupled first.
 -->

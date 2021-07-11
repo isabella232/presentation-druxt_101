@@ -30,7 +30,7 @@ The Frontend is an instance of the DruxtSite module using the BootstrapVue UI fr
 Let's take a quick walk through of the site __ BRIAN:
 (BRIAN TO SHARE)
 - It's serving Full Statically generated HTML, which Nuxt hydrates to provide client-side navigation.
-- This also allows for Layout components, which provide modern User experience.
+- This also allows for Layout components, which provide modern User experience, like the SearchBar.
 - The Frontend is hosted on Amazee's Lagoon, however, being Full static allows it to run on services like Netlify and Vercel.
 
 The source code is all available on github, so be sure to check it out.

@@ -7,136 +7,136 @@ info: |
   Fully Decoupled Drupal with JSON:API and Nuxt.js
 
   Learn more at [DruxtJS.org](https://druxtjs.org)
-src: ./slides/index.md
+src: ./slides-index.md
 theme: ./theme
 ---
 
 ---
 layout: image-right
 image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
-src: ./slides/presenter/stuart-clark.md
+src: ./slides-presenter-stuart-clark.md
 ---
 
 ---
 layout: image-left
 image: https://secure.gravatar.com/avatar/dd0e29f8a76a2481b2bfec40e69f749f?s=800
-src: ./slides/presenter/brian-gilbert.md
+src: ./slides-presenter-brian-gilbert.md
 ---
 
 ---
 layout: center
-src: ./slides/druxt/index.md
+src: ./slides-druxt-index.md
 ---
 
 ---
 layout: center
-src: ./slides/druxt/drupal.md
+src: ./slides-druxt-drupal.md
 ---
 
 ---
 layout: center
-src: ./slides/druxt/drupal-module.md
+src: ./slides-druxt-drupal-module.md
 ---
 
 ---
 layout: center
-src: ./slides/druxt/nuxt.md
+src: ./slides-druxt-nuxt.md
 ---
 
 ---
 layout: center
-src: ./slides/druxt/nuxt-modules.md
+src: ./slides-druxt-nuxt-modules.md
 ---
 
 ---
 class: text-center
 layout: cover
-src: ./slides/druxt/tldr.md
+src: ./slides-druxt-tldr.md
 ---
 
 ---
 layout: center
-src: ./slides/toc.md
+src: ./slides-toc.md
 ---
 
 ---
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
-src: ./slides/umami/index.md
+src: ./slides-umami-index.md
 ---
 
 ---
 layout: center
-src: ./slides/modules/druxt-site.md
+src: ./slides-modules-druxt-site.md
 ---
 
 ---
 class: text-sm
 id: R6eM3JQ_pv8
 layout: youtube-right
-src: ./slides/umami/demo.md
+src: ./slides-umami-demo.md
 ---
 
 ---
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
-src: ./slides/getting-started/index.md
+src: ./slides-getting-started-index.md
 ---
 
 ---
 layout: youtube-left
 id: PQcTyIpdHsk
-src: ./slides/getting-started/drupal.md
+src: ./slides-getting-started-drupal.md
 ---
 
 ---
 layout: youtube-right
 id: aWoQRb4F3FY
-src: ./slides/getting-started/nuxt.md
+src: ./slides-getting-started-nuxt.md
 ---
 
 ---
 background: /images/nuxt-welcome.png
 class: text-center
 layout: cover
-src: ./slides/getting-started/demo-1.md
+src: ./slides-getting-started-demo-1.md
 ---
 
 ---
 layout: image-right-position
 position: top left
 image: /images/druxt-welcome.png
-src: ./slides/modules/druxt-router.md
+src: ./slides-modules-druxt-router.md
 ---
 
 ---
-src: ./slides/diagrams/druxt-router.md
+src: ./slides-diagrams-druxt-router.md
 ---
 
 ---
 layout: center
-src: ./slides/modules/druxt-views.md
+src: ./slides-modules-druxt-views.md
 ---
 
 ---
 background: /images/drupal-cms.png
 class: text-center
 layout: cover
-src: ./slides/getting-started/demo-2.md
+src: ./slides-getting-started-demo-2.md
 ---
 
 ---
 layout: center
-src: ./slides/modules/druxt-entity.md
+src: ./slides-modules-druxt-entity.md
 ---
 
 ---
 image: /images/components.png
 layout: image-right-position
 position: left
-src: ./slides/modules/druxt-schema.md
+src: ./slides-modules-druxt-schema.md
 ---
 
 ---

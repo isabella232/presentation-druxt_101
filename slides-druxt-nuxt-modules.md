@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div>
     <h2>DruxtBlocks</h2>
@@ -49,7 +50,7 @@
 </div>
 
 <!--
-And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth.
+And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth and DruxtWordpress.
 
 You can also create your own custom modules by extending the DruxtModule component.
 -->

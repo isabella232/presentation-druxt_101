@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
@@ -31,13 +32,13 @@
 </div>
 
 <!--
-The Druxt module is ideally a temporary measure, and all things it does could be handled by Drupal core in the future.
+The Druxt module is ideally a temporary measure, as all the things it does could be handled by Drupal core in the future.
 
 - Enables required modules:
   - Decoupled router
-  - JSON:API Menu Items at the moment, however it will also support the Drupal Decoupled Menu Initiative solution in the future.
+  - JSON:API Menu Items at the moment, however it will also support the Decoupled Menu Initiative's solution in the future.
   - JSON:API Views (beta release).
 - Adds a Read-only permission for required resources
-- Adds bypass for block condition plugin system to allow for decoupled blocks
-- Enables CORS
+- As well as some required workaround to enable Decoupled Blocks
+- And Enables CORS by default
 -->
