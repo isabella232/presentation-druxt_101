@@ -281,7 +281,9 @@ layout: center
 </div>
 
 <!--
-And Druxt comprises of 8 notable core modules, such as DruxtBlocks, DruxtViews and DruxtEntity, with more to come in the future.
+And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth.
+
+You can also create your own custom modules by extending the DruxtModule component.
 -->
 
 ---
@@ -308,8 +310,8 @@ layout: center
 3. Themeing (DruxtWrapper)
 4. Blocks & Regions
 5. Storybook
-6. SPA
-7. SSG
+6. Single Page Applications
+7. Static Site Generation
 
 <!--
 Druxt is a big project, and there is a lot to talk about.
@@ -330,7 +332,7 @@ layout: cover
 ## Umami Parity project
 
 <!--
-Let's get started with the DruxtSite and the Umami Parity project.
+Let's get started with DruxtSite and the Umami Parity project.
 -->
 
 ---
@@ -364,8 +366,6 @@ layout: center
 </div>
 
 <!--
-# DruxtSite
-
 Druxt is not necessarily for out of the box Drupal sites but the DruxtSite module is.
 
 It provides:
@@ -390,6 +390,8 @@ class: text-sm
 <div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
   <ri-cloud-line class="opacity-50"/>
   <div><a href="https://demo.druxtjs.org" target="_blank">demo.druxtjs.org</a></div>
+  <ri-cloud-line class="opacity-50"/>
+  <div><a href="https://druxt-umami.netlify.app" target="_blank">druxt-umami.netlify.app</a></div>
   <ri-artboard-line class="opacity-50"/>
   <div><a href="http://umami-storybook.druxtjs.org" target="_blank">umami-storybook.druxtjs.org</a></div>
   <ri-github-line class="opacity-50"/>
@@ -409,12 +411,13 @@ The Backend is a standard Drupal Umami profile install, with the Druxt module an
 
 The Frontend is an instance of the DruxtSite module using the BootstrapVue UI framework and custom DruxtWrapper theme components.
 
-The source code is all available on github, so be sure to check it out.
-
-Let's take a quick walk through of the site:
-- The site is hosted on Amazee's Lagoon
+Let's take a quick walk through of the site __ BRIAN:
+(BRIAN TO SHARE)
 - It's serving Full Statically generated HTML, which Nuxt hydrates to provide client-side navigation.
-- Layout components can be used for modern UX offerings.
+- This also allows for Layout components, which provide modern User experience.
+- The Frontend is hosted on Amazee's Lagoon, however, being Full static allows it to run on services like Netlify and Vercel.
+
+The source code is all available on github, so be sure to check it out.
 -->
 
 ---
@@ -426,6 +429,12 @@ layout: cover
 # Getting Started
 
 ## with DruxtSite
+
+<!--
+Now, let's talk about how to get started using DruxtSite yourself.
+
+Being Fully decoupled, Druxt requires both a Drupal and a Nuxt codebase.
+-->
 
 ---
 layout: youtube-left
@@ -508,19 +517,13 @@ druxt: {
 4. `npm run dev`
 
 <!--
-DruxtSite uses the available Druxt modules to provide an out of the box Drupal site experience.
-
-- Wildcard routing via Decoupled Router
-- Entity pages/displays using DruxtEntity and Drupal display information.
-- Block placement via Block regions per theme.
-- Views via JSON:API Views module.
+@TODO - Druxt is a Functional Framework, not a Design library.
 
 ## Timing
 
 - 1:00 - Nuxt downloaded
 - 1:19 - DruxtSite downloaded
 - 1:51 - Setup
-
 -->
 
 ---
@@ -533,15 +536,22 @@ layout: cover
 
 ## (Round 1)
 
+<div class="my-10 grid grid-cols-[30px,100px] w-min gap-y-4 mx-auto">
+  <ri-home-line class="opacity-50"/>
+  <div><a href="http://localhost:3000" target="_blank">localhost:3000</a></div>
+</div>
+
 <!--
+Druxt extends Nuxt, and in the case of the DruxtSite module we can see that by the presence of the DruxtRouter wildcard route.
+
+Nuxt has a Page based routing system, which allows frontend driven campaign pages and single page apps, among other things, but in our case we want Drupal to serve the homepage, so I'll go ahead and delete this page.
+
 1. Show Page
 2. Open VueDevTools > Routes
 3. Delete `pages/index.vue`
 4. Reveal no content.
-5. Create content.
-6. Reveal content.
-7. Show node page
-8. Recap
+5. Walkthrough components
+6. Recap
 -->
 
 ---
@@ -563,6 +573,10 @@ image: /images/druxt-welcome.png
     <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
   </div>
 </div>
+
+<!--
+Once we delete the default Nuxt page, we see the No Result text for the Frontpage View, as per a standard Drupal installation.
+-->
 
 ---
 
@@ -587,12 +601,9 @@ sequenceDiagram
 ```
 
 <!--
-DruxtRouter uses a Vuex store to cache queries made against the Drupal Decoupled Router module.
+This is provided via the DruxtRouter module, which uses Drupals Deocupled Router module to determine the JSON:API resource and Druxt component to render.
 
-Add browser before Nuxt
-"Drupal Decoupled Router"
-
-Add a slide on Drupal module and dependencies.
+The route data is cached in the druxtRouter vuex store, reducing queries to the Drupal backend.
 -->
 
 ---
@@ -627,6 +638,24 @@ layout: center
   </div>
 </div>
 
+<!--
+In this case, the route is the Drupal Frontpage View, so the DruxtView module is used to render this route.
+
+The DruxtView component can also be used in a standard Nuxt page or Vue component.
+
+It requires a View ID or UUID, and an optional Display ID.
+-->
+
+---
+background: /images/drupal-cms.png
+class: text-center
+layout: cover
+---
+
+# Content & Configuration
+
+## (Round 2)
+
 ---
 layout: center
 ---
@@ -659,16 +688,6 @@ layout: center
 
   </div>
 </div>
-
----
-background: /images/drupal-cms.png
-class: text-center
-layout: cover
----
-
-# Content & Configuration
-
-## (Round 2)
 
 ---
 image: /images/components.png
