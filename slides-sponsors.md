@@ -1,3 +1,4 @@
+
 # Sponsors
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
@@ -15,3 +16,9 @@
     </div>
   </div>
 </div>
+
+<!--
+A big thanks to Realityloop for sponsored development on the project.
+
+And to lagoon for providing community hosting for the website.
+-->

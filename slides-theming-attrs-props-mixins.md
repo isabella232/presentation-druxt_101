@@ -1,3 +1,4 @@
+
 # Theming
 
 ### $attrs, props & mixins
@@ -34,3 +35,7 @@ export default {
 
   </div>
 </div>
+
+<!--
+Each module provides slots and $attrs as well as a mixin to register props.
+-->

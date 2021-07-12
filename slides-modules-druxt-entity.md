@@ -15,15 +15,34 @@
   </div>
   <div class="pb-4 pl-8">
 
-```jsx
-<DruxtEntity
-  :mode="displayMode"
-  :type="resourceType"
-  :uuid="uuid"
-/>
+```vue
+// DruxtEntity component
+<template>
+  <DruxtEntity :mode="displayMode" :type="resourceType" :uuid="uuid" />
+</template>
 ```
 
-![Example DruxtEntity component](/images/druxt-entity.png)
+```vue
+// Default template
+<template>
+  <DruxtEntity v-bind="{ mode, type, uuid }">
+    <template #default="{ entity, schema }">
+      <h1>{{ entity.attributes.title }}</h1>
+    </template>
+  </DruxtEntity>
+</template>
+```
+
+```vue
+// Wrapper & slots
+<template>
+  <div>
+    <h1>{{ $attrs.entity.attributes.title }}</h1>
+    <slot name="field_media_image" />
+    <slot name="body" />
+  </div>
+</template>
+```
 
   </div>
 </div>

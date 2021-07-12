@@ -24,38 +24,38 @@ src: ./slides-presenter-brian-gilbert.md
 ---
 
 ---
-layout: center
+layout: module
 src: ./slides-druxt-index.md
 ---
 
 ---
-layout: center
+layout: section
 src: ./slides-druxt-drupal.md
 ---
 
 ---
-layout: center
+layout: module
 src: ./slides-druxt-drupal-module.md
 ---
 
 ---
-layout: center
+layout: section
 src: ./slides-druxt-nuxt.md
 ---
 
 ---
-layout: center
+layout: section
 src: ./slides-druxt-nuxt-modules.md
 ---
 
 ---
 class: text-center
-layout: cover
+layout: fact
 src: ./slides-druxt-tldr.md
 ---
 
 ---
-layout: center
+layout: section
 src: ./slides-toc.md
 ---
 
@@ -67,7 +67,7 @@ src: ./slides-umami-index.md
 ---
 
 ---
-layout: center
+layout: module
 src: ./slides-modules-druxt-site.md
 ---
 
@@ -105,9 +105,8 @@ src: ./slides-getting-started-demo-1.md
 ---
 
 ---
-layout: image-right
-position: top left
-image: /images/druxt-welcome.png
+background: /images/druxt-welcome.png
+layout: module
 src: ./slides-modules-druxt-router.md
 ---
 
@@ -117,7 +116,8 @@ src: ./slides-diagrams-druxt-router.md
 ---
 
 ---
-layout: center
+background: /images/druxt-views-page.png
+layout: module
 src: ./slides-modules-druxt-views.md
 ---
 
@@ -129,14 +129,14 @@ src: ./slides-getting-started-demo-2.md
 ---
 
 ---
-layout: center
+background: /images/druxt-entity.png
+layout: module
 src: ./slides-modules-druxt-entity.md
 ---
 
 ---
-image: /images/components.png
-layout: image-right
-position: left
+background: /images/schemas.png
+layout: module
 src: ./slides-modules-druxt-schema.md
 ---
 
@@ -173,7 +173,7 @@ src: ./slides-prettification.md
 
 
 ---
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: /images/druxt-block-region.png
 class: text-center
 layout: cover
 src: ./slides-blocks-regions.md
@@ -181,8 +181,9 @@ src: ./slides-blocks-regions.md
 
 
 ---
-layout: center
-src: ./slides-blocks-druxtblocks.md
+background: /images/druxt-block-region.png
+layout: module
+src: ./slides-modules-druxt-blocks.md
 ---
 
 

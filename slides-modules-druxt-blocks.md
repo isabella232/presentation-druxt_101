@@ -14,18 +14,19 @@
   </div>
   <div class="pb-4 pl-8">
 
-```jsx
-<DruxtBlock :id="drupal_internal__id" />
+```vue
+// DruxtBlock component
+<template>
+  <DruxtBlock :id="drupal_internal__id" />
+</template>
 ```
 
-```jsx
-<DruxtBlockRegion 
-  :name="name"
-  :theme="theme"
-/>
+```vue
+// DruxtBlockRegion component
+<template>
+  <DruxtBlockRegion :name="name" :theme="theme" />
+</template>
 ```
-
-![Example DruxtBlockRegion component](/images/druxt-block-region.png)
 
   </div>
 </div>

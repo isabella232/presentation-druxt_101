@@ -32,8 +32,6 @@
 </div>
 
 <!--
-The Druxt module is ideally a temporary measure, as all the things it does could be handled by Drupal core in the future.
-
 - Enables required modules:
   - Decoupled router
   - JSON:API Menu Items at the moment, however it will also support the Decoupled Menu Initiative's solution in the future.
@@ -41,4 +39,6 @@ The Druxt module is ideally a temporary measure, as all the things it does could
 - Adds a Read-only permission for required resources
 - As well as some required workaround to enable Decoupled Blocks
 - And Enables CORS by default
+
+The Druxt module is ideally a temporary measure, as all the things it does could be handled by Drupal core in the future.
 -->

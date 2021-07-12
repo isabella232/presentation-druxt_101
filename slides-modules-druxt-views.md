@@ -15,14 +15,34 @@
   </div>
   <div class="pb-4 pl-8">
 
-```jsx
-<DruxtView
-  :display-id="displayId"
-  :view-id="viewId"
-/>
+```vue
+// DruxtView component
+<template>
+  <DruxtView :display-id="displayId" :view-id="viewId" />
+</template>
 ```
 
-![Example DruxtView component](/images/druxt-views-page.png)
+```vue
+// Default template
+<template>
+  <DruxtView v-bind="{ displayId, viewId }">
+    <template #default="{ results, view }">
+      <DruxtEntity v-for="result of results" v-bind="result" />
+    </template>
+  </DruxtView>
+</template>
+```
+
+```vue
+// Wrapper & slots
+<template>
+  <div>
+    <slot name="filters" />
+    <slot name="results" />
+    <slot name="pager" />
+  </div>
+</template>
+```
 
   </div>
 </div>

@@ -1,6 +1,6 @@
 # Theming
 
-### Slots & Wrappers
+### Wrappers & slots
 
 ```vue {all|1-7|9-15|17-21}
 <template>
@@ -33,8 +33,4 @@ A wrapper is just a Vue component:
 - Template: `.tpl.php/.twig` HTML + Components, Slots and Mustache templates.
 - Script: `.js` Vue & Nuxt data, props, methods, etc
 - Style: `.css` Multi-lingual, scope, PostCSS processing
-
-Each module provides slots and $attrs as well as a mixin to register props.
-
-Example: `druxt/entity/node/article/teaser.vue`
 -->
