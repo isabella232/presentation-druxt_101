@@ -211,6 +211,13 @@ src: ./slides-storybook-umami.md
 ---
 
 ---
+class: text-sm
+id: OL_bRANN6oA
+layout: youtube-right
+src: ./slides-editbar-demo.md
+---
+
+---
 class: text-center
 layout: cover
 src: ./slides-sponsors.md
