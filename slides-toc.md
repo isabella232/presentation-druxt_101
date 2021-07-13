@@ -1,8 +1,10 @@
+
 # Table of Contents
 
+0. Introduction
 1. DruxtSite - Umami Parity project
 2. Getting started with DruxtSite
-3. Themeing (DruxtWrapper)
+3. Theming (DruxtWrapper)
 4. Blocks & Regions
 5. Storybook
 6. Single Page Applications

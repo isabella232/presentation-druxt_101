@@ -1,11 +1,13 @@
+
 # Welcome to ~~Nuxt~~ Druxt
 
 ## (Round 1)
 
-<div class="my-10 grid grid-cols-[30px,100px] w-min gap-y-4 mx-auto">
-  <ri-home-line class="opacity-50"/>
-  <div><a href="http://localhost:3000" target="_blank">localhost:3000</a></div>
-</div>
+<div class="mb-50" />
+
+```
+rm pages/index.vue
+```
 
 <!--
 Druxt extends Nuxt, and in the case of the DruxtSite module we can see that by the presence of the DruxtRouter wildcard route.
