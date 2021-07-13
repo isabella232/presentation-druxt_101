@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
@@ -12,7 +13,9 @@
       <a class="!border-none" href="https://www.npmjs.com/package/druxt-site" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-site?label=druxt-site" alt="NPM version"></a>
     </div>
   </div>
-  <div class="!all:leading-12 !all:list-none my-auto">
+
+  <div>
+  <div class="content-card">
 
   - Decoupled router
   - Drupal powered Entity, Fields and Forms
@@ -20,7 +23,14 @@
   - ~~Vuews~~ Views
   - Menus, Breadcrumbs, etc
   - Reactive content editing
-
+  </div>
+    
+  ```vue
+  // DruxtSite component
+  <template>
+    <DruxtSite :theme="theme" />
+  </template>
+  ```
   </div>
 </div>
 
