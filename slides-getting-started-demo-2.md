@@ -1,8 +1,6 @@
 
 # Content & Configuration
 
-## (Round 2)
-
 <!--
 1. Open Drupal backend: http://127.0.0.1:8888
 2. Add content: Decopled Days 2021

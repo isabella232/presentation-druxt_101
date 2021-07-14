@@ -23,10 +23,6 @@
 
 This is the Umami Parity project, it's my testing ground and goal posts for the Druxt 1.0 release.
 
-The Backend is a standard Drupal Umami profile install, with the Druxt module and some minor customisations.
-
-The Frontend is an instance of the DruxtSite module using the BootstrapVue UI framework and custom DruxtWrapper theme components.
-
 Let's take a quick walk through of the site __ BRIAN:
 (BRIAN TO SHARE)
 - It's serving Full Statically generated HTML, which Nuxt hydrates to provide client-side navigation.

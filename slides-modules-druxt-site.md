@@ -37,11 +37,7 @@
 <!--
 Druxt is not necessarily for out of the box Drupal sites but the DruxtSite module is.
 
-It provides:
-- a Decoupled router
-- Drupal powered Entity, Fields and Forms
-- Blocks and Regions
-- Views, Menus, Breadcrumbs, and more
+It provides all the necessary modules to get setup for Decoupled Drupal development in under 5 minutes.
 
 And as Druxt is Reactive by default, it supports inline content editing via the `v-model` directive.
 -->

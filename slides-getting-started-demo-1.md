@@ -18,6 +18,7 @@ Nuxt has a Page based routing system, which allows frontend driven campaign page
 2. Open VueDevTools > Routes
 3. Delete `pages/index.vue`
 4. Reveal no content.
-5. Walkthrough components
-6. Recap
+5. Add content
+6. Show content.
+7. Recap
 -->
