@@ -7,8 +7,13 @@
 3. Theming (DruxtWrapper)
 4. Blocks & Regions
 5. Storybook
-6. Single Page Applications
+6. Reactivity and v-model
 7. Static Site Generation
+8. Q & A
+
+<div class="mb-10" />
+
+## [druxt-101.slides.realityloop.com](https://druxt-101.slides.realityloop.com)
 
 <!--
 Druxt is a big project, and there is a lot to talk about.

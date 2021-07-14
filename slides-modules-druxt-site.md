@@ -15,7 +15,7 @@
   </div>
 
   <div>
-  <div class="content-card">
+  <div class="content-card !all:leading-12 mb-2 !all:list-none">
 
   - Decoupled router
   - Drupal powered Entity, Fields and Forms

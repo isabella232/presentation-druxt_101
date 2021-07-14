@@ -130,15 +130,15 @@ src: ./slides-getting-started-demo-2.md
 ---
 
 ---
-background: /images/druxt-entity.png
-layout: module
-src: ./slides-modules-druxt-entity.md
----
-
----
 background: /images/schemas.png
 layout: module
 src: ./slides-modules-druxt-schema.md
+---
+
+---
+background: /images/druxt-entity.png
+layout: module
+src: ./slides-modules-druxt-entity.md
 ---
 
 ---
@@ -172,7 +172,6 @@ layout: cover
 src: ./slides-prettification.md
 ---
 
-
 ---
 background: /images/druxt-block-region.png
 class: text-center
@@ -180,13 +179,11 @@ layout: cover
 src: ./slides-blocks-regions.md
 ---
 
-
 ---
 background: /images/druxt-block-region.png
 layout: module
 src: ./slides-modules-druxt-blocks.md
 ---
-
 
 ---
 background: /images/umami-storybook.png
@@ -195,13 +192,11 @@ layout: cover
 src: ./slides-storybook.md
 ---
 
-
 ---
 id: ek8BlCghwkE
 layout: youtube-right
 src: ./slides-storybook-nuxtjs.md
 ---
-
 
 ---
 background: /images/umami-storybook.png
@@ -211,14 +206,39 @@ src: ./slides-storybook-umami.md
 ---
 
 ---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+src: ./slides-reactivity.md
+---
+
+---
 class: text-sm
 id: OL_bRANN6oA
 layout: youtube-right
-src: ./slides-editbar-demo.md
+src: ./slides-reactivity-v-model.md
+---
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+src: ./slides-reactivity-demo.md
+---
+
+---
+id: SoWU5PfE7SI
+layout: youtube-right
+src: ./slides-ssg.md
 ---
 
 ---
 class: text-center
 layout: cover
 src: ./slides-sponsors.md
+---
+
+---
+layout: cover
+src: ./slides-qa.md
 ---
