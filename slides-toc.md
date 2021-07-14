@@ -11,10 +11,6 @@
 7. Static Site Generation
 8. Q & A
 
-<div class="mb-10" />
-
-## [druxt-101.slides.realityloop.com](https://druxt-101.slides.realityloop.com)
-
 <!--
 Druxt is a big project, and there is a lot to talk about.
 

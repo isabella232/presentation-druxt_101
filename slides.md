@@ -239,6 +239,7 @@ src: ./slides-sponsors.md
 ---
 
 ---
+class: text-center
 layout: cover
-src: ./slides-qa.md
+src: ./slides-end.md
 ---
