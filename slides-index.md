@@ -1,3 +1,4 @@
+
 # Druxt 101
 
 Fully Decoupled Drupal  
@@ -9,6 +10,3 @@ with JSON:API and Nuxt.js
   </span>
 </div>
 
-<!--
-@todo Background image / video
--->

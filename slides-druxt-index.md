@@ -27,11 +27,9 @@
 </div>
 
 <!--
-# Druxt
+Let's talk about about Druxt: What is Druxt?
 
-What is Druxt?
-
-An open source framework for building Fully Decoupled Drupal integrations with Nuxt
+Druxt is An open source framework for building Fully Decoupled Drupal integrations with Nuxt
 
 - It is Drupal and Node Modules.
 - it's aDrupal JSON:API Client

@@ -1,3 +1,4 @@
+
 # Stuart Clark
 
 <div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
@@ -14,13 +15,12 @@
 </div>
 
 <!--
-@todo Add Realityloop logo
+Hello
 
-* Senior Decoupled Developer @ Realityloop in Australia
-* Deciphered @ Drupal.org (~15years)
-* Project lead @ DruxtJS
+I'm Stuart Clark:
+* Decoupled Developer @ Realityloop in Australia
+* Drupal developer of 15 years
+* Vue developer for 3+ years with focus on decoupled, leading to the creation of Druxt
 
 With me today is ...
-
-@todo Put Brian and me on half/quater slide?
 -->

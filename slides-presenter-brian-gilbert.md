@@ -1,3 +1,4 @@
+
 # Brian Gilbert
 
 <div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
@@ -10,3 +11,15 @@
   <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>
+
+<!--
+Brian Gilbert:
+- Founder of Realityloop
+- Fellow Tech enthusiast and VR streamer
+
+Today will be acting as a:
+- Chat bot
+- and time manager
+
+Say Hi Brian
+-->
