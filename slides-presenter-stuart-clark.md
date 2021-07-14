@@ -11,9 +11,7 @@
   <mdi-nuxt class="opacity-50" />
   <div><a href="https://druxtjs.org" target="_blank">DruxtJS.org</a></div>
   <mdi-youtube class="opacity-50" />
-  <div><a href="https://www.youtube.com/channel/UC3rybROe6cP9Uly_qQEW-4w" target="_blank">Druxt</a></div>
-  <mdi-youtube class="opacity-50" />
-  <div><a href="https://www.youtube.com/channel/UCHp-BhAv8T5AHM8K4y_Mzlw" target="_blank">Mixed Stack Gaming</a></div>
+  <div><a href="https://www.youtube.com/channel/UCHp-BhAv8T5AHM8K4y_Mzlw" target="_blank">Mixed&nbsp;Stack&nbsp;Gaming</a></div>
   <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>

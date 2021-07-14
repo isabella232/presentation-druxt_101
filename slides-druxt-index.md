@@ -4,7 +4,13 @@
     <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
     <div class="mb-2 text-sm">
       <h1>Druxt</h1>
-      <a href="https://druxtjs.org" target="_blank">druxtjs.org</a>
+      <a href="https://druxtjs.org" target="_blank">druxtjs.org</a><br />
+      <a href="https://www.youtube.com/channel/UC3rybROe6cP9Uly_qQEW-4w" class="no-underline" target="_blank">
+        <mdi-youtube class="inline-block no-underline opacity-50" />
+      </a>
+      <a href="https://twitter.com/druxtjs" class="no-underline" target="_blank">
+        <mdi-twitter class="inline-block no-underline opacity-50" />
+      </a>
     </div>
     <div class="opacity-50 mb-2 text-sm">
       An open source framework for building<br />
