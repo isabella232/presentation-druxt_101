@@ -8,6 +8,8 @@
   <div><a href="https://www.drupal.org/u/realityloop" target="_blank">realityloop</a></div>
   <mdi-github class="opacity-50" />
   <div><a href="https://github.com/BrianGilbert" target="_blank">BrianGilbert</a></div>
+  <mdi-youtube class="opacity-50" />
+  <div><a href="https://youtube.com/konstruukt" target="_blank">Konstruukt</a></div>
   <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>
