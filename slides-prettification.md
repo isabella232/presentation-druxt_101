@@ -11,4 +11,5 @@
 5. Explain missing fields and DruxtWrapper
 6. Create `druxt/entity/node/article/Default.vue`
 7. Add `<DruxtView view-id="frontpage" />`
+8. Goto Blocks demo
 -->

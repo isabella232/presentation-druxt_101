@@ -1,3 +1,4 @@
+
 <img class="h-15 absolute left-95" src="https://raw.githubusercontent.com/storybookjs/brand/master/icon/icon-storybook-default.svg">
 
 # @nuxtjs/storybook
@@ -24,6 +25,8 @@ npm i -D @nuxtjs/storybook
 2. `npx nuxt storybook`
 
 <!--
+[MAKE SURE TO START STORYBOOK AFTER CONTENT WAS CREATED]
+
 Druxt provides zero-config, auto-generated Storybook integration.
 
 ## Timing
