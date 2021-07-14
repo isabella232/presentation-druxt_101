@@ -16,6 +16,7 @@
         </div>
 
         <slot name="body" />
+        <!-- <DruxtEntityForm v-model="model" :type="entity.type" /> -->
       </b-col>
 
       <b-col>
@@ -47,10 +48,6 @@ import { DruxtEntityMixin } from 'druxt-entity'
 
 export default {
   mixins: [DruxtEntityMixin],
-  
-  data: () => ({
-    edit: false,
-  }),
 
   computed: {
     tags: ({ entity }) => entity.relationships.field_tags.data,
