@@ -70,9 +70,3 @@ html.dark {
 :not(pre) > code:before {
   margin-right: -0.08em;
 }
-
-div.content-card {
-  background: var(--prism-background);
-  color: var(--prism-foreground);
-  @apply p-1 rounded;
-}

@@ -1,8 +1,9 @@
 {
   "name": "@slidev/theme-default",
-  "version": "0.7.4",
+  "version": "0.21.0",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0",
+    "slidev": ">=0.19.2"
   },
   "description": "Default theme for Slidev",
   "keywords": [
@@ -16,18 +17,23 @@
   },
   "slidev": {
     "colorSchema": "both",
-    "highlighter": "all"
+    "highlighter": "all",
+    "defaults": {
+      "fonts": {
+        "mono": "Fira Code",
+        "sans": "Avenir Next,Nunito Sans",
+        "local": "Avenir Next"
+      }
+    }
   },
   "funding": "https://github.com/sponsors/antfu",
   "author": "antfu <anthonyfu117@hotmail.com>",
   "homepage": "https://sli.dev",
   "bugs": "https://github.com/slidevjs/themes/issues",
-  "peerDependencies": {
-    "@slidev/client": "^0.6.7"
-  },
   "dependencies": {
+    "@slidev/types": "^0.22.7",
     "codemirror-theme-vars": "^0.1.1",
     "prism-theme-vars": "^0.2.2",
-    "theme-vitesse": "^0.1.11"
+    "theme-vitesse": "^0.1.12"
   }
 }
