@@ -92,7 +92,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>Druxt</h1>
       <a href="https://druxtjs.org" target="_blank">druxtjs.org</a><br />
@@ -179,7 +179,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>Druxt<small class="text-sm text-gray-400">.module</small></h1>
       <a href="https://drupal.org/project/druxt" target="_blank">drupal.org/project/druxt</a>
@@ -221,7 +221,7 @@ layout: section
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
-    <img class="h-40 mb-4 inline-block" src="https://vuejs.org/images/logo.svg">
+    <img class="h-40 mb-4 inline-block" src="/images/logo-vue.svg">
     <div class="mb-2 text-sm">
       <h1>Vue.js</h1>
       <a href="https://vuejs.org" target="_blank">vuejs.org</a>
@@ -235,7 +235,7 @@ layout: section
   </div>
 
   <div class="my-auto text-center pb-4 pl-8">
-    <img class="h-40 mb-4 inline-block" src="https://nuxtjs.org/logos/nuxt.svg">
+    <img class="h-40 mb-4 inline-block" src="/images/logo-nuxt.svg">
     <div class="mb-2 text-sm">
       <h1>Nuxt.js</h1>
       <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
@@ -371,7 +371,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>DruxtSite</h1>
       <a href="https://site.druxtjs.org" target="_blank">site.druxtjs.org</a>
@@ -593,7 +593,7 @@ layout: module
 ---
 
 <div class="pb-4 text-center">
-  <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+  <img class="h-50 inline-block" src="/images/logo-druxt.svg">
   <div class="mb-2 text-sm">
     <h1>DruxtRouter</h1>
     <a href="https://router.druxtjs.org" target="_blank">router.druxtjs.org</a>
@@ -647,7 +647,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>DruxtViews</h1>
       <a href="https://views.druxtjs.org" target="_blank">views.druxtjs.org</a>
@@ -725,7 +725,7 @@ layout: module
 ---
 
 <div class="pb-4 text-center">
-  <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+  <img class="h-50 inline-block" src="/images/logo-druxt.svg">
   <div class="mb-2 text-sm">
     <h1>DruxtSchema</h1>
     <a href="https://schema.druxtjs.org" target="_blank">schema.druxtjs.org</a>
@@ -751,7 +751,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>DruxtEntity</h1>
       <a href="https://entity.druxtjs.org" target="_blank">entity.druxtjs.org</a>
@@ -969,7 +969,7 @@ layout: module
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="https://druxtjs.org/logo.svg">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
     <div class="mb-2 text-sm">
       <h1>DruxtBlocks</h1>
       <a href="https://blocks.druxtjs.org" target="_blank">blocks.druxtjs.org</a>
