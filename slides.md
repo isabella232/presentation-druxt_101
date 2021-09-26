@@ -26,6 +26,8 @@ layout: image-right
 image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
 ---
 
+<img class="h-10 absolute left-90" src="/images/logo-realityloop-logomark.png">
+
 # Stuart Clark
 
 <div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
@@ -35,10 +37,6 @@ image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
   <div><a href="https://www.drupal.org/u/Deciphered" target="_blank">Deciphered</a></div>
   <mdi-github class="opacity-50" />
   <div><a href="https://github.com/decipher" target="_blank">Decipher</a></div>
-  <mdi-nuxt class="opacity-50" />
-  <div><a href="https://druxtjs.org" target="_blank">DruxtJS.org</a></div>
-  <mdi-youtube class="opacity-50" />
-  <div><a href="https://www.youtube.com/channel/UCHp-BhAv8T5AHM8K4y_Mzlw" target="_blank">Mixed&nbsp;Stack&nbsp;Gaming</a></div>
   <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>
@@ -52,38 +50,6 @@ I'm Stuart Clark:
 * Vue developer for 3+ years with focus on decoupled, leading to the creation of Druxt
 
 With me today is ...
--->
-
----
-layout: image-left
-image: https://secure.gravatar.com/avatar/dd0e29f8a76a2481b2bfec40e69f749f?s=800
----
-
-# Brian Gilbert
-
-<div class="my-10 grid grid-cols-[40px,1fr] w-min gap-y-4">
-  <mdi-briefcase class="opacity-50" />
-  <div><a href="https://www.realityloop.com" target="_blank">Realityloop.com</a></div>
-  <mdi-drupal class="opacity-50" />
-  <div><a href="https://www.drupal.org/u/realityloop" target="_blank">realityloop</a></div>
-  <mdi-github class="opacity-50" />
-  <div><a href="https://github.com/BrianGilbert" target="_blank">BrianGilbert</a></div>
-  <mdi-youtube class="opacity-50" />
-  <div><a href="https://youtube.com/konstruukt" target="_blank">Konstruukt</a></div>
-  <mdi-earth class="opacity-50"/>
-  <div>Australia</div>
-</div>
-
-<!--
-Brian Gilbert:
-- Founder of Realityloop
-- Fellow Tech enthusiast and VR streamer
-
-Today will be acting as a:
-- Chat bot
-- and time manager
-
-Say Hi Brian
 -->
 
 ---
@@ -113,12 +79,12 @@ layout: module
   </div>
   <div class="!all:leading-12 !all:list-none my-auto">
 
-  - Drupal and Node module(s)
-  - Drupal JSON:API client
+  - Entities, Fields, Views, Blocks, Menus & more
+  - JSON:API client + Vuex state management
   - Modular Vue.js component library
-  - Vuex resource and collection cache
-  - SPA / SSG / SSR
+  - Drupal, Nuxt & Node modules
   - Fully Decoupled first
+  - SPA / SSG / SSR
 
   </div>
 </div>
@@ -143,9 +109,9 @@ layout: section
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
-    <img class="h-40 mb-4 inline-block" src="https://www.drupal.org/files/cta/graphic/drupal%208%20logo%20isolated%20CMYK%2072_1.png">
+    <img class="h-20 mb-4 inline-block" src="https://www.drupal.org/files/cta/graphic/drupal%208%20logo%20isolated%20CMYK%2072_1.png">
     <div class="mb-2 text-sm">
-      <h1>Drupal 8</h1>
+      <h2>Drupal 8</h2>
       <a href="https://drupal.org/8" target="_blank">drupal.org/8</a>
     </div>
     <div class="opacity-50 mb-2 text-xl">
@@ -156,9 +122,9 @@ layout: section
   </div>
 
   <div class="my-auto text-center pb-4 pl-8">
-    <img class="h-40 mb-4 inline-block" src="https://www.drupal.org/files/EL_blue_RGB%281%29.png">
+    <img class="h-20 mb-4 inline-block" src="https://www.drupal.org/files/EL_blue_RGB%281%29.png">
     <div class="mb-2 text-sm">
-      <h1>Drupal 9</h1>
+      <h2>Drupal 9</h2>
       <a href="https://drupal.org/9" target="_blank">drupal.org/9</a>
     </div>
     <div class="opacity-50 mb-2 text-xl">
@@ -167,10 +133,40 @@ layout: section
     <div class="text-center">
     </div>
   </div>
+
+  <div class="text-center pb-4">
+    <img class="h-15 mb-4 mt-4 inline-block" src="https://vuejs.org/images/logo.svg">
+    <div class="mb-2 text-sm">
+      <h2>Vue.js</h2>
+      <a href="https://vuejs.org" target="_blank">vuejs.org</a>
+    </div>
+    <div class="opacity-50 mb-2 text-xl">
+      The Progressive JavaScript Framework
+    </div>
+    <div class="text-center">
+      <a class="!border-none" href="https://www.npmjs.com/package/vue" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/vue?label=vue" alt="NPM version"></a>
+    </div>
+  </div>
+
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-20 mb-4 inline-block" src="/images/logo-nuxt.svg">
+    <div class="mb-2 text-sm">
+      <h2>Nuxt.js</h2>
+      <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
+    </div>
+    <div class="opacity-50 mb-2 text-xl">
+      The Intuitive Vue Framework
+    </div>
+    <div class="text-center">
+      <a class="!border-none" href="https://www.npmjs.com/package/nuxt" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/nuxt?label=nuxt" alt="NPM version"></a>
+    </div>
+  </div>
 </div>
 
 <!--
 Druxt works with both Drupal 8 and 9, and can work on existing sites and distributions, including but not limited to ContentaCMS and Tide.
+
+Druxt is Vue.js 2 and Nuxt.js 2, and support will be added for Vue 3 and Nuxt 3 in the future.
 -->
 
 ---
@@ -213,44 +209,6 @@ layout: module
 The Druxt module for Drupal handles all third party requirements, and provides a read-only permission to enable the Nuxxt modules to consume the required data.
 
 The intent is to remove the requirement on this module in favour of a Drupal native solution.
--->
-
----
-layout: section
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-40 mb-4 inline-block" src="/images/logo-vue.svg">
-    <div class="mb-2 text-sm">
-      <h1>Vue.js</h1>
-      <a href="https://vuejs.org" target="_blank">vuejs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-xl">
-      The Progressive JavaScript Framework
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/vue" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/vue?label=vue" alt="NPM version"></a>
-    </div>
-  </div>
-
-  <div class="my-auto text-center pb-4 pl-8">
-    <img class="h-40 mb-4 inline-block" src="/images/logo-nuxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>Nuxt.js</h1>
-      <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-xl">
-      The Intuitive Vue Framework
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/nuxt" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/nuxt?label=nuxt" alt="NPM version"></a>
-    </div>
-  </div>
-</div>
-
-<!--
-Druxt is Vue.js 2 and Nuxt.js 2, and support will be added for Vue 3 and Nuxt 3 in the future.
 -->
 
 ---
@@ -333,8 +291,8 @@ layout: section
 # Table of Contents
 
 0. Introduction
-1. DruxtSite - Umami Parity project
-2. Getting started with DruxtSite
+1. Demo - Umami Parity project
+2. Getting started using DruxtSite
 3. Theming (DruxtWrapper)
 4. Blocks & Regions
 5. Storybook
@@ -356,60 +314,14 @@ class: text-center
 layout: cover
 ---
 
-# DruxtSite
+# Demo
 
 ## Umami Parity project
 
+https://demo.druxtjs.org
+
 <!--
 Let's get started with DruxtSite and the Umami Parity project.
--->
-
----
-background: /images/modules-druxt-site.png
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>DruxtSite</h1>
-      <a href="https://site.druxtjs.org" target="_blank">site.druxtjs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      Out of the box, Decoupled Drupal site experience.
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/druxt-site" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-site?label=druxt-site" alt="NPM version"></a>
-    </div>
-  </div>
-
-  <div>
-  <div class="content-card !all:leading-12 mb-2 !all:list-none">
-
-  - Decoupled router
-  - Drupal powered Entity, Fields and Forms
-  - Blocks and Regions
-  - ~~Vuews~~ Views
-  - Menus, Breadcrumbs, etc
-  - Reactive content editing
-  </div>
-    
-  ```vue
-  // DruxtSite component
-  <template>
-    <DruxtSite :theme="theme" />
-  </template>
-  ```
-  </div>
-</div>
-
-<!--
-Druxt is not necessarily for out of the box Drupal sites but the DruxtSite module is.
-
-It provides all the necessary modules to get setup for Decoupled Drupal development in under 5 minutes.
-
-And as Druxt is Reactive by default, it supports inline content editing via the `v-model` directive.
 -->
 
 ---
@@ -452,14 +364,13 @@ The source code is all available on github, so be sure to check it out.
 -->
 
 ---
-background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
 ---
 
 # Getting Started
 
-## with DruxtSite
+## using DruxtSite
 
 <!--
 Now, let's talk about how to get started using DruxtSite yourself.
@@ -517,7 +428,7 @@ layout: youtube-right
 id: aWoQRb4F3FY
 ---
 
-<img class="h-15 absolute left-90" src="https://nuxtjs.org/logos/nuxt.svg">
+<img class="h-15 absolute left-90" src="/images/logo-nuxt.svg">
 
 # Getting Started
 
@@ -535,13 +446,11 @@ npm i druxt-site
 
 3. Configure `nuxt.config.js`
 ```js
-modules: [
-  ...
-  'druxt-site',
-],
-
+buildModules: ['druxt-site'],
 druxt: {
   baseUrl: 'https://example.com',
+  // (optional) Disable Nuxt `pages/`
+  router: { pages: false },
 }
 ```
 
@@ -558,20 +467,51 @@ druxt: {
 -->
 
 ---
-background: /images/nuxt-welcome.png
+layout: youtube-left
+id: 
+---
+
+<img class="h-15 absolute right-15" src="/images/logo-gitpod.svg">
+
+# Quickstart
+
+## with Gitpod
+
+<div class="mb-5" />
+
+> One click, Fully Decoupled Drupal Site starter-kit with Druxt.
+
+<div class="mb-20" />
+
+https://github.com/druxt/quickstart-druxt-site
+
+<div class="mb-10" />
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/druxt/quickstart-druxt-site)
+
+<!--
+Druxt/Decoupled Drupal needs a Drupal backend.
+
+Drupal 8 and 9 are both supported, and the Druxt module should work with existing sites or distributions, like Contenta.
+
+A permission is provided for READ ONLY access to JSON:API endpoints required by the Druxt fontend modules.
+
+## Timing
+
+- 0:35 - Drupal downloaded
+- 0:47 - Druxt module downloaded
+- 1:07 - Drupal installed
+- 1:37 - Druxt Setup
+-->
+
+---
 class: text-center
 layout: cover
 ---
 
-# Welcome to ~~Nuxt~~ Druxt
+# Welcome to DruxtSite
 
 ## (Round 1)
-
-<div class="mb-50" />
-
-```
-rm pages/index.vue
-```
 
 <!--
 Druxt extends Nuxt, and in the case of the DruxtSite module we can see that by the presence of the DruxtRouter wildcard route.
@@ -588,120 +528,24 @@ Nuxt has a Page based routing system, which allows frontend driven campaign page
 -->
 
 ---
-background: /images/druxt-welcome.png
-layout: module
+layout: section
 ---
 
-<div class="pb-4 text-center">
-  <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-  <div class="mb-2 text-sm">
-    <h1>DruxtRouter</h1>
-    <a href="https://router.druxtjs.org" target="_blank">router.druxtjs.org</a>
-  </div>
-  <div class="opacity-50 mb-2 text-sm">
-    Simple decoupled Drupal routing for Nuxt.
-  </div>
-  <div class="text-center">
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
-  </div>
-</div>
-
-<!--
-Once we delete the default Nuxt page, we see the No Result text for the Frontpage View, as per a standard Drupal installation.
--->
-
----
-layout: full
----
+# How the Druxt does it work?
 
 ```mermaid { theme: 'base' }
-sequenceDiagram
-  Browser->>+VueRouter: Request route
-  alt Wildcard route
-    rect rgba(65, 184, 131, 1)
-      VueRouter->>+DruxtRouter: Fallback to DruxtRouter
-      DruxtRouter->>+druxtRouterStore: getRoute()
-      alt MISS
-        rect rgba(6, 120, 190, 1)
-          druxtRouterStore->>+Decoupled Router: /router/translate-path?path=
-          Decoupled Router->>-druxtRouterStore: Resolved route
-        end
-      end
-      druxtRouterStore->>-DruxtRouter: Resolved route
-      DruxtRouter->>-VueRouter: Resolved component
-    end
-    VueRouter->>-Browser: Return page
-  end
+flowchart LR
+  Nuxt --> DruxtSite
+  DruxtSite --> DruxtBlocks
+  DruxtBlocks --> DruxtBreadcrumb
+  DruxtBlocks --> DruxtMenu
+  DruxtBlocks --> DruxtRouter
+  Nuxt --> DruxtSchema
+  DruxtSchema --> DruxtEntity
+  DruxtRouter --> DruxtEntity
+  DruxtRouter --> DruxtView
+  DruxtView --> DruxtEntity
 ```
-
-<!--
-This is provided via the DruxtRouter module, which uses Drupals Deocupled Router module to determine the JSON:API resource and Druxt component to render.
-
-The route data is cached in the druxtRouter vuex store, reducing queries to the Drupal backend.
--->
-
----
-background: /images/druxt-views-page.png
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>DruxtViews</h1>
-      <a href="https://views.druxtjs.org" target="_blank">views.druxtjs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      Drupal Views Vue.js components for Nuxt.js
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/druxt-views" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-views?label=druxt-views" alt="NPM version"></a>
-    </div>
-  </div>
-  <div class="pb-4 pl-8">
-
-```vue
-// DruxtView component
-<template>
-  <DruxtView :display-id="displayId" :view-id="viewId" />
-</template>
-```
-
-```vue
-// Default template
-<template>
-  <DruxtView v-bind="{ displayId, viewId }">
-    <template #default="{ results, view }">
-      <DruxtEntity v-for="result of results" v-bind="result" />
-    </template>
-  </DruxtView>
-</template>
-```
-
-```vue
-// Wrapper & slots
-<template>
-  <div>
-    <slot name="filters" />
-    <slot name="results" />
-    <slot name="pager" />
-  </div>
-</template>
-```
-
-  </div>
-</div>
-
-<!--
-In this case, the route is the Drupal Frontpage View, so the DruxtView module is used to render the page.
-
-The DruxtView component can also be used in a standard Nuxt page or Vue component.
-
-It requires a View ID or UUID, and an optional Display ID.
-
-All configuration is managed in the Drupal backend, but the Frontend developer has access to the configuration, pagination, filters, sorts and more via the DruxtWrapper slots system.
--->
 
 ---
 background: /images/drupal-cms.png
@@ -711,98 +555,14 @@ layout: cover
 
 # Content & Configuration
 
+## in the back
+
 <!--
 1. Open Drupal backend: http://127.0.0.1:8888
 2. Add content: Decopled Days 2021 * 2
 3. Show Frontend.
 4. Walkthrough Entity Components data
 5. Recap
--->
-
----
-background: /images/schemas.png
-layout: module
----
-
-<div class="pb-4 text-center">
-  <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-  <div class="mb-2 text-sm">
-    <h1>DruxtSchema</h1>
-    <a href="https://schema.druxtjs.org" target="_blank">schema.druxtjs.org</a>
-  </div>
-  <div class="opacity-50 mb-2 text-sm">
-    Entity Form and View mode schemas for Drupal driven frontends.
-  </div>
-  <div class="text-center">
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-schema" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-schema?label=druxt-schema" alt="NPM version"></a>
-  </div>
-</div>
-
-<!--
-The DruxtSchema module generates a schema file for each Content Entity Resource type per View and Form Display modes.
-
-The files are currently only generated during the Druxt build cycle, but live regeneration will be added in a future release.
--->
-
----
-background: /images/druxt-entity.png
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>DruxtEntity</h1>
-      <a href="https://entity.druxtjs.org" target="_blank">entity.druxtjs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      Drupal Display Mode powered Entity, Form and Field Vue.js component system.
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/druxt-entity" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-entity?label=druxt-entity" alt="NPM version"></a>
-    </div>
-  </div>
-  <div class="pb-4 pl-8">
-
-```vue
-// DruxtEntity component
-<template>
-  <DruxtEntity :mode="displayMode" :type="resourceType" :uuid="uuid" />
-</template>
-```
-
-```vue
-// Default template
-<template>
-  <DruxtEntity v-bind="{ mode, type, uuid }">
-    <template #default="{ entity, schema }">
-      <h1>{{ entity.attributes.title }}</h1>
-    </template>
-  </DruxtEntity>
-</template>
-```
-
-```vue
-// Wrapper & slots
-<template>
-  <div>
-    <h1>{{ $attrs.entity.attributes.title }}</h1>
-    <slot name="field_media_image" />
-    <slot name="body" />
-  </div>
-</template>
-```
-
-  </div>
-</div>
-
-<!--
-The DruxtEntity module displays a Drupal content entity using Drupal's Display modes and field configuration.
-
-The DruxtEntity component requires the Entity UUID, resource type and an optional display mode.
-
-It also supports Form schemas for content editing via the schemaType property, as well as the DruxtEntityForm component
 -->
 
 ---
@@ -816,7 +576,7 @@ layout: cover
 ## DruxtWrapper
 
 ---
-layout: full-left
+layout: full
 ---
 
 # Theming
@@ -857,7 +617,7 @@ A wrapper is just a Vue component:
 -->
 
 ---
-layout: full-left
+layout: full
 ---
 
 # Theming
@@ -1196,7 +956,7 @@ layout: cover
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4 mt-8">
-    <a href="https://www.realityloop.com" target="_blank"><img class="mb-4 ml-8 w-100" src="/images/realityloop-logo-transparent.png"></a>
+    <a href="https://www.realityloop.com" target="_blank"><img class="mb-4 ml-8 w-100" src="/images/logo-realityloop.png"></a>
     <div class="mb-2 text-sm mt-14">
       <h2>Development</h2>
     </div>

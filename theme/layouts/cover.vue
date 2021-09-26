@@ -15,8 +15,6 @@ const style = computed(() => handleBackground(props.background, true))
   <div class="slidev-layout cover" :style="style">
     <div class="my-auto w-full">
       <slot />
-      <a href="https://druxtjs.org" target="_blank"><img class="bottom-3 left-5 absolute w-10" src="/images/druxt-logomark-transparent.png"></a>
-      <a href="https://www.realityloop.com" target="_blank"><img class="bottom-5 right-5 absolute w-13" src="/images/realityloop-logomark-transparent.png"></a>
     </div>
   </div>
 </template>
