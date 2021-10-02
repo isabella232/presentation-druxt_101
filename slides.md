@@ -45,9 +45,10 @@ image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
 Hello
 
 I'm Stuart Clark:
-* Decoupled Developer @ Realityloop in Australia
+* Senior Decoupled Developer @ Realityloop in Australia
 * Drupal developer of 15 years
-* Vue developer for 3+ years with focus on decoupled, leading to the creation of Druxt
+* Vue developer for 3/4 years
+* Project lead of Druxt
 
 With me today is ...
 -->
@@ -90,17 +91,13 @@ layout: module
 </div>
 
 <!--
-Let's talk about about Druxt: What is Druxt?
+What is Druxt?
 
-Druxt is An open source framework for building Fully Decoupled Drupal integrations with Nuxt
+Druxt is a framework for Frontend developers to build modern user experiences for Drupal.
 
-- It is Drupal and Node Modules.
-- it's aDrupal JSON:API Client
-- a Modular Vue component library system with a Vuex store based caching system
-  - Partial resources
-  - Dehydration of both collection and included resources
-- It can be used for Single Page Applications, Static Site Generation, Server Side Rendering and a combination of the lot.
-- Fully decoupled first.
+Druxt consumes Content and Configuration from Drupal, allowing you the choice between "Doing it the Drupal way" and "Doing it the 'frontend' way", and anywhere in between; The freedom to "Do it your way".
+
+Druxt exists because the frontend experience in Drupal has never been good. (Sorry, not sorry)
 -->
 
 ---
@@ -164,9 +161,13 @@ layout: section
 </div>
 
 <!--
-Druxt works with both Drupal 8 and 9, and can work on existing sites and distributions, including but not limited to ContentaCMS and Tide.
+Druxt is built on top of Drupal and Nuxt.
 
-Druxt is Vue.js 2 and Nuxt.js 2, and support will be added for Vue 3 and Nuxt 3 in the future.
+Drupal being a PHP framework for your backend, and Nuxt a Vue.js framework for your frontend.
+
+Supports Drupal 8, 9, and can be used alongside existing decoupled distributions, such as ContentaCMS
+
+Currently built for Vue 2 and Nuxt 2, expected to work with Nuxt 3 and Vue 3 ASAP.
 -->
 
 ---
@@ -209,6 +210,8 @@ layout: module
 The Druxt module for Drupal handles all third party requirements, and provides a read-only permission to enable the Nuxxt modules to consume the required data.
 
 The intent is to remove the requirement on this module in favour of a Drupal native solution.
+
+Get in touch if you wish to help!
 -->
 
 ---
@@ -266,9 +269,12 @@ layout: section
 </div>
 
 <!--
-And Druxt comprises of 8 notable core modules, with several in the pipeline, including DruxtAuth and DruxtWordpress.
+Druxt provides 8 modules,
+each can be used on it's own to target specific Decoupled Drupal functionality, providing Node modules, Vue components, Vuex stores and more.
 
-You can also create your own custom modules by extending the DruxtModule component.
+Some parts of these modules can be used with other javascript libraryes (React), such as the DruxtSchema module.
+
+Custom modules can be added by extending the DruxtModule vue component.
 -->
 
 ---
@@ -304,8 +310,6 @@ layout: section
 Druxt is a big project, and there is a lot to talk about.
 
 In case we are unable to cover everything today, checkout the slides in your own time.
-
-Any topics you wish to prioritise, please let Brian know in the chat or via the poll.
 -->
 
 ---
@@ -321,7 +325,7 @@ layout: cover
 https://demo.druxtjs.org
 
 <!--
-Let's get started with DruxtSite and the Umami Parity project.
+Let's get started with a Demo of the Umami Parity project
 -->
 
 ---
@@ -329,6 +333,8 @@ class: text-sm
 id: R6eM3JQ_pv8
 layout: youtube-right
 ---
+
+<img src="/images/logo-umami.svg" class="h-10 mb-10" />
 
 # Umami Parity project
 
@@ -348,19 +354,18 @@ layout: youtube-right
 </div>
 
 <!--
-@todo Add Umami logo on slide and improve layout / style
+The Umami installation profiles provides a great example of what Drupal can give you out of the box.
 
-[Click play]
+As such, it's the obvious choise to demonstrate what the DruxtSite can give you out of the box.
 
-This is the Umami Parity project, it's my testing ground and goal posts for the Druxt 1.0 release.
+Let's take a quick look:
+[Demo]
 
-Let's take a quick walk through of the site __ BRIAN:
-(BRIAN TO SHARE)
-- It's serving Full Statically generated HTML, which Nuxt hydrates to provide client-side navigation.
-- This also allows for Layout components, which provide modern User experience, like the SearchBar.
-- The Frontend is hosted on Amazee's Lagoon, however, being Full static allows it to run on services like Netlify and Vercel.
-
-The source code is all available on github, so be sure to check it out.
+Features:
+- Search layout component
+- Drupal driven entities / contact form
+- Frontend editing
+- Storybook integration
 -->
 
 ---
@@ -373,9 +378,9 @@ layout: cover
 ## using DruxtSite
 
 <!--
-Now, let's talk about how to get started using DruxtSite yourself.
+DruxtSite is the quickest way to get started if you are looking to build a decoupled Site.
 
-Being Fully decoupled, Druxt requires both a Drupal and a Nuxt codebase.
+It's nearly zero-config and sets up all the required frontend modules for a semi-traditional Drupal site with a Vue.js based theme layer.
 -->
 
 ---
@@ -409,11 +414,9 @@ php ./web/core/scripts/drupal quick-start
 5. Configure permissions: [/admin/people/permissions](http://127.0.0.1:8888/admin/people/permissions#module-druxt)
 
 <!--
-Druxt/Decoupled Drupal needs a Drupal backend.
+The only thing needed to enable Druxt on Drupal is the Druxt module, and to add it's provided permission to a role of your choice.
 
-Drupal 8 and 9 are both supported, and the Druxt module should work with existing sites or distributions, like Contenta.
-
-A permission is provided for READ ONLY access to JSON:API endpoints required by the Druxt fontend modules.
+It only takes about 1:30 to go from zero-code to Druxt ready Drupal.
 
 ## Timing
 
@@ -457,7 +460,17 @@ druxt: {
 4. `npm run dev`
 
 <!--
-@TODO - Druxt is a Functional Framework, not a Design library.
+Druxt uses the Nuxt framework for it's "frontend".
+
+Nuxt is a modular Vue.js framework, much like Drupal is a module PHP framework.
+
+Nuxt does all the hard things you don't want to have to do when decoupling or working with javascript:
+- Builds your javascript bundle
+- Provides extensible page based routing
+- Supports Server Side and Client side rendering as well as Static Site Generation
+
+Installation is easy, with a CLI wizard: `npx crate-nuxt-app`
+Configuration is done in the `nuxt.config.js` file.
 
 ## Timing
 
@@ -468,7 +481,7 @@ druxt: {
 
 ---
 layout: youtube-left
-id: 
+id: null
 ---
 
 <img class="h-15 absolute right-15" src="/images/logo-gitpod.svg">
@@ -490,18 +503,13 @@ https://github.com/druxt/quickstart-druxt-site
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/druxt/quickstart-druxt-site)
 
 <!--
-Druxt/Decoupled Drupal needs a Drupal backend.
+@TODO - Make video
 
-Drupal 8 and 9 are both supported, and the Druxt module should work with existing sites or distributions, like Contenta.
+To make things even easier, you can use the DruxtSite Quickstart repository on Gitpod to be full decoupled in a cloud IDE:
 
-A permission is provided for READ ONLY access to JSON:API endpoints required by the Druxt fontend modules.
-
-## Timing
-
-- 0:35 - Drupal downloaded
-- 0:47 - Druxt module downloaded
-- 1:07 - Drupal installed
-- 1:37 - Druxt Setup
+- Click the button
+- Login with Github
+- Wait just a little bit
 -->
 
 ---
@@ -511,7 +519,7 @@ layout: cover
 
 # Welcome to DruxtSite
 
-## (Round 1)
+## (Live demo)
 
 <!--
 Druxt extends Nuxt, and in the case of the DruxtSite module we can see that by the presence of the DruxtRouter wildcard route.
