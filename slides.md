@@ -80,12 +80,14 @@ layout: module
   </div>
   <div class="!all:leading-12 !all:list-none my-auto">
 
-  - Entities, Fields, Views, Blocks, Menus & more
-  - JSON:API client + Vuex state management
-  - Modular Vue.js component library
-  - Drupal, Nuxt & Node modules
-  - Fully Decoupled first
-  - SPA / SSG / SSR
+  - **Content and configuration** in the backend
+  - **Routing and rendering** in the frontend
+  - **Entities**, **Fields**, **Forms** and **Display modes**
+  - **Views** pages and blocks
+  - **Blocks**, **Regions**, **Menus** & more
+  - Auto filtering **JSON:API** client w/**Vuex caching**
+  - **Server side** and **Client side** rendering
+  - **Static site generation**
 
   </div>
 </div>
@@ -103,6 +105,8 @@ Druxt exists because the frontend experience in Drupal has never been good. (Sor
 ---
 layout: section
 ---
+
+## Backend / L*MP
 
 <div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
@@ -130,7 +134,11 @@ layout: section
     <div class="text-center">
     </div>
   </div>
+</div>
 
+## Frontend / Jamstack
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
   <div class="text-center pb-4">
     <img class="h-15 mb-4 mt-4 inline-block" src="https://vuejs.org/images/logo.svg">
     <div class="mb-2 text-sm">
@@ -139,9 +147,6 @@ layout: section
     </div>
     <div class="opacity-50 mb-2 text-xl">
       The Progressive JavaScript Framework
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/vue" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/vue?label=vue" alt="NPM version"></a>
     </div>
   </div>
 
@@ -154,127 +159,22 @@ layout: section
     <div class="opacity-50 mb-2 text-xl">
       The Intuitive Vue Framework
     </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/nuxt" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/nuxt?label=nuxt" alt="NPM version"></a>
-    </div>
   </div>
 </div>
 
 <!--
-Druxt is built on top of Drupal and Nuxt.
+Druxt is Fully decoupled, which means it requires two servers: Drupal for the Backend and Nuxt.js for the Frontend.
 
-Drupal being a PHP framework for your backend, and Nuxt a Vue.js framework for your frontend.
+Both Drupal 8, and 9 are supported, and Druxt can be used alongside pre-existing sites and distributions, such as ContentaCMS.
 
-Supports Drupal 8, 9, and can be used alongside existing decoupled distributions, such as ContentaCMS
+The Druxt frontend is built on top of Nuxt.js, a a modular Vue.js framework, much like Drupal is a module PHP framework.
 
-Currently built for Vue 2 and Nuxt 2, expected to work with Nuxt 3 and Vue 3 ASAP.
--->
+Nuxt does all the hard things you don't want to have to do when decoupling or working with javascript:
+- Builds your javascript bundle
+- Provides extensible page based routing
+- Supports Server Side and Client side rendering as well as Static Site Generation
 
----
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>Druxt<small class="text-sm text-gray-400">.module</small></h1>
-      <a href="https://drupal.org/project/druxt" target="_blank">drupal.org/project/druxt</a>
-    </div>
-  </div>
-  <div class="pl-8 my-auto">
-
-  ### Requires:
-
-  <div class="text-sm py-4 !all:leading-6 !all:list-none">
-
-  - Decoupled Router
-  - JSON:API Menu Items
-  - JSON:API Views
-
-  </div>
-
-  ### Provides:
-
-  <div class="text-sm py-4 !all:leading-6 !all:list-none">
-
-  - Read-only permission for required resources
-  - Block condition plugin bypass
-  - Enables Cross-Origin Resource Sharing (CORS)
-
-  </div>
-  </div>
-</div>
-
-<!--
-The Druxt module for Drupal handles all third party requirements, and provides a read-only permission to enable the Nuxxt modules to consume the required data.
-
-The intent is to remove the requirement on this module in favour of a Drupal native solution.
-
-Get in touch if you wish to help!
--->
-
----
-layout: section
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div>
-    <h2>DruxtBlocks</h2>
-    <div class="pb-2 text-sm">Blocks and regions</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-blocks" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-blocks?label=druxt-blocks" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtBreadcrumb</h2>
-    <div class="pb-2 text-sm">Route based breadcrumbs</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-breadcrumb" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-breadcrumb?label=druxt-breadcrumb" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtEntity</h2>
-    <div class="pb-2 text-sm">Entities, forms and fields</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-entity" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-entity?label=druxt-entity" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtMenu</h2>
-    <div class="pb-2 text-sm">Menus and menu items</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-menu" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-menu?label=druxt-menu" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtRouter</h2>
-    <div class="pb-2 text-sm">Wildcard router</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtSchema</h2>
-    <div class="pb-2 text-sm">Entity display modes and field formatters</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-schema" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-schema?label=druxt-schema" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtSite</h2>
-    <div class="pb-2 text-sm">Out-of-the-box Decoupled Drupal</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-site" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-site?label=druxt-site" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtViews</h2>
-    <div class="pb-2 text-sm">Drupal Views pages and blocks</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-views" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-views?label=druxt-views" alt="NPM version"></a>
-  </div>
-</div>
-
-<!--
-Druxt provides 8 modules,
-each can be used on it's own to target specific Decoupled Drupal functionality, providing Node modules, Vue components, Vuex stores and more.
-
-Some parts of these modules can be used with other javascript libraryes (React), such as the DruxtSchema module.
-
-Custom modules can be added by extending the DruxtModule vue component.
+Nuxt 2 uses Vue 2, but Nuxt 3 is due for a public beta soon which will add support for Vue 3.
 -->
 
 ---
@@ -297,14 +197,13 @@ layout: section
 # Table of Contents
 
 0. Introduction
-1. Demo - Umami Parity project
-2. Getting started using DruxtSite
-3. Theming (DruxtWrapper)
-4. Blocks & Regions
-5. Storybook
-6. Reactivity and v-model
-7. Static Site Generation
-8. Q & A
+1. Getting started using DruxtSite
+2. Theming with Wrappers and Slots
+3. Single Page Applications with Druxt components
+4. Entity forms and reactivity
+5. Static Site Generation
+6. #GetInvolved
+7. Q & A
 
 <!--
 Druxt is a big project, and there is a lot to talk about.
@@ -313,62 +212,7 @@ In case we are unable to cover everything today, checkout the slides in your own
 -->
 
 ---
-background: /images/modules-druxt-site.png
-class: text-center
-layout: cover
----
-
-# Demo
-
-## Umami Parity project
-
-https://demo.druxtjs.org
-
-<!--
-Let's get started with a Demo of the Umami Parity project
--->
-
----
-class: text-sm
-id: R6eM3JQ_pv8
-layout: youtube-right
----
-
-<img src="/images/logo-umami.svg" class="h-10 mb-10" />
-
-# Umami Parity project
-
-<div class="mb-10" />
-
-<div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
-  <ri-cloud-line class="opacity-50"/>
-  <div><a href="https://demo.druxtjs.org" target="_blank">demo.druxtjs.org</a></div>
-  <ri-cloud-line class="opacity-50"/>
-  <div><a href="https://druxt-umami.netlify.app" target="_blank">druxt-umami.netlify.app</a></div>
-  <ri-artboard-line class="opacity-50"/>
-  <div><a href="http://umami-storybook.druxtjs.org" target="_blank">umami-storybook.druxtjs.org</a></div>
-  <ri-github-line class="opacity-50"/>
-  <div><a href="https://github.com/druxt/demo.druxtjs.org" target="_blank">github.com/druxt/demo.druxtjs.org</a></div>
-  <ri-github-line class="opacity-50"/>
-  <div><a href="https://github.com/druxt/demo-api.druxtjs.org" target="_blank">github.com/druxt/demo-api.druxtjs.org</a></div>
-</div>
-
-<!--
-The Umami installation profiles provides a great example of what Drupal can give you out of the box.
-
-As such, it's the obvious choise to demonstrate what the DruxtSite can give you out of the box.
-
-Let's take a quick look:
-[Demo]
-
-Features:
-- Search layout component
-- Drupal driven entities / contact form
-- Frontend editing
-- Storybook integration
--->
-
----
+background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
 ---
@@ -414,9 +258,11 @@ php ./web/core/scripts/drupal quick-start
 5. Configure permissions: [/admin/people/permissions](http://127.0.0.1:8888/admin/people/permissions#module-druxt)
 
 <!--
-The only thing needed to enable Druxt on Drupal is the Druxt module, and to add it's provided permission to a role of your choice.
-
-It only takes about 1:30 to go from zero-code to Druxt ready Drupal.
+Setting up your Druxt backend is relatively straight forward:
+- Download Drupal
+- Download the Druxt module
+- Enable the Druxt module
+- Add the Druxt permission to a user Role
 
 ## Timing
 
@@ -452,25 +298,17 @@ npm i druxt-site
 buildModules: ['druxt-site'],
 druxt: {
   baseUrl: 'https://example.com',
-  // (optional) Disable Nuxt `pages/`
-  router: { pages: false },
+  site: { theme: 'bartik' },
 }
 ```
 
 4. `npm run dev`
 
 <!--
-Druxt uses the Nuxt framework for it's "frontend".
-
-Nuxt is a modular Vue.js framework, much like Drupal is a module PHP framework.
-
-Nuxt does all the hard things you don't want to have to do when decoupling or working with javascript:
-- Builds your javascript bundle
-- Provides extensible page based routing
-- Supports Server Side and Client side rendering as well as Static Site Generation
-
-Installation is easy, with a CLI wizard: `npx crate-nuxt-app`
-Configuration is done in the `nuxt.config.js` file.
+To setup your frontend you need to:
+- Download Nuxt
+- Download the Druxt modules you wish to use
+- Edit the `nuxt.config.js` file
 
 ## Timing
 
@@ -480,59 +318,37 @@ Configuration is done in the `nuxt.config.js` file.
 -->
 
 ---
-layout: youtube-left
-id: null
----
-
-<img class="h-15 absolute right-15" src="/images/logo-gitpod.svg">
-
-# Quickstart
-
-## with Gitpod
-
-<div class="mb-5" />
-
-> One click, Fully Decoupled Drupal Site starter-kit with Druxt.
-
-<div class="mb-20" />
-
-https://github.com/druxt/quickstart-druxt-site
-
-<div class="mb-10" />
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/druxt/quickstart-druxt-site)
-
-<!--
-@TODO - Make video
-
-To make things even easier, you can use the DruxtSite Quickstart repository on Gitpod to be full decoupled in a cloud IDE:
-
-- Click the button
-- Login with Github
-- Wait just a little bit
--->
-
----
 class: text-center
 layout: cover
 ---
 
-# Welcome to DruxtSite
+# Live demo
+## Getting Started with DruxtSite
 
-## (Live demo)
+<div class="mb-10" />
+
+https://gitpod.io#github.com/druxt/quickstart-druxt-site
 
 <!--
-Druxt extends Nuxt, and in the case of the DruxtSite module we can see that by the presence of the DruxtRouter wildcard route.
+In this demo I'm using the DruxtSite quickstart repository on Gitpod.
+Feel free to follow along at home: [Add link to chat]
 
-Nuxt has a Page based routing system, which allows frontend driven campaign pages and single page apps, among other things, but in our case we want Drupal to serve the homepage, so I'll go ahead and delete this page.
+- Drupal is pre-installed and confgured using DDev.
+- Nuxt in pre-installed and setup with the DruxtSite module which is a Druxt distribution that gives you all of the Druxt modules to get started building a Fully decoupled Drupal Site.
 
-1. Show Page
-2. Open VueDevTools > Routes
-3. Delete `pages/index.vue`
-4. Reveal no content.
-5. Add content
-6. Show content.
-7. Recap
+A default Layout is injected into Nuxt to render the DruxtSite component, which renders all the available Block regions for the specified theme.
+
+The theme can be set in the Nuxt configuration.
+
+The blocks order and visibility are determined by the Drupal backend: [Show backend]
+
+The current page is rendereed via the Drupal "Main page content" block using the DruxtRouter and the Drupal Decoupled Router module.
+
+Out of the box, using the standard Drupal installation profile, this renders the frontpage view, which you can see here.
+
+Let's go make some content so we can see this better: [ddev drush genc]
+
+The layout and settings of the Entity fields are determined by the Display mode, but can be fully overridden in the frontend using DruxtWrapper components.
 -->
 
 ---
@@ -541,63 +357,74 @@ layout: section
 
 # How the Druxt does it work?
 
-```mermaid { theme: 'base' }
+```mermaid { theme: 'base', scale: 0.9 }
 flowchart LR
-  Nuxt --> DruxtSite
-  DruxtSite --> DruxtBlocks
-  DruxtBlocks --> DruxtBreadcrumb
-  DruxtBlocks --> DruxtMenu
-  DruxtBlocks --> DruxtRouter
   Nuxt --> DruxtSchema
+  Nuxt --> DruxtSite
   DruxtSchema --> DruxtEntity
-  DruxtRouter --> DruxtEntity
-  DruxtRouter --> DruxtView
-  DruxtView --> DruxtEntity
+  subgraph Layout
+    DruxtSite --> DruxtBlocks
+    DruxtBlocks --> DruxtBreadcrumb
+    DruxtBlocks --> DruxtMenu
+    DruxtBlocks --> DruxtRouter
+  end
+  subgraph Route
+    DruxtRouter --> DruxtEntity
+    DruxtRouter --> DruxtView
+    DruxtView --> DruxtEntity
+  end
 ```
 
----
-background: /images/drupal-cms.png
-class: text-center
-layout: cover
----
-
-# Content & Configuration
-
-## in the back
-
 <!--
-1. Open Drupal backend: http://127.0.0.1:8888
-2. Add content: Decopled Days 2021 * 2
-3. Show Frontend.
-4. Walkthrough Entity Components data
-5. Recap
+That was a lot of stuff, so let's recap:
+
+- During build:
+  - Nuxt generates DruxtSchema files
+- During render:
+  - Nuxt renders the DruxtSite
+  - DruxtSite renders all available Block regions for the configured theme
+  - The Block regions render the visible Blocks for the current route, including, but not limited to the Breadcrumb, Menu and Content blocks.
+  - The Content block renders the page for the Nuxt route, or the wildcard DruxtRouter page.
+  - The DruxtRouter page renders a DruxtView or DruxtEntity based on the resolved Decoupled Route.
+  - DruxtViews render DruxtEntities
+  - DruxtEntities use the generated schemas to render the appropriate fields for the chosen Display mode.
 -->
 
 ---
-background: /images/components.png
+background: /images/umami-storybook.png
 class: text-center
 layout: cover
 ---
 
 # Theming
 
-## DruxtWrapper
+## with Wrappers and Slots
+
+<!--
+Druxt components use a DruxtWrapper component theming system.
+
+It's a hybrid of Drupal's own theming system, but using Vue single file components instead of Twig files.
+-->
+
+---
+layout: section
+---
+
+# Vue crash course
 
 ---
 layout: full
 ---
 
-# Theming
+## Vue single file component
 
-### Wrappers & slots
-
-```vue {all|1-7|9-15|17-21}
+```vue {all|1-7|9-18|20-24}
 <template>
-  <BCard>
+  <article>
     <h2>{{ entity.attributes.title }}</h2>
     <slot name="body" />
-    <BButton :to="link" variant="success">Read more</BButton>
-  </BCard>
+    <AppButton :to="link" @click="onClick">Click me</AppButton>
+  </article>
 </template>
 
 <script>
@@ -605,6 +432,9 @@ export default {
   computed: {
     link: ({ entity }) => entity.attributes.path.alias || `/node/${entity.attributes.drupal_internal__nid}`,
   },
+  methods: {
+    onClick() { ... }
+  }
 }
 </script>
 
@@ -616,165 +446,48 @@ h2 {
 ```
 
 <!--
-Druxt provides Wrapper components for theming the modules.
+If you're not familiar with Vue files, they are a single file that contains everything for single component; Markup, Javascript and CSS.
 
-A wrapper is just a Vue component:
-- Template: `.tpl.php/.twig` HTML + Components, Slots and Mustache templates.
-- Script: `.js` Vue & Nuxt data, props, methods, etc
-- Style: `.css` Multi-lingual, scope, PostCSS processing
+This alone, in my opinion, is one of the biggest benefits of decoupling for a Frontend developer.
+
+If you're not familiar with Drupals Twig files, CSS and Javascript file structure, that's OK.
 -->
 
 ---
-layout: full
+image: /images/devtools-attrs-props-slots.png
+layout: image-right
 ---
 
-# Theming
+## $attrs, mixins, props & slots
 
-### $attrs, props & mixins
-
-<div class="grid grid-cols-[2fr,2fr] gap-4 mt-4 text-sm">
-  <div>
-
-```jsx
+```vue
 <template>
-  <div>{{ $attrs.entity.attributes.title }}</div>
-</template>
-```
-
-All unregistered props data is provided as `$attrs`.
-
-It is recommended to register your `props`, or use the `mixin` provided by the module.
-
-  </div>
-  <div>
-
-```jsx
-<template>
-  <div>{{ entity.attributes.title }}</div>
+  <article v-bind="$attrs">
+    <h2>{{ entity.attributes.title }}</h2>
+    <slot name="field_image" />
+    <slot name="field_tags" />
+    <slot name="body" />
+  </article>
 </template>
 
 <script>
 import { DruxtEntityMixin } from 'druxt-entity'
-
 export default {
   mixins: [DruxtEntityMixin],
 }
 </script>
 ```
 
-  </div>
-</div>
+<div class="mb-5" />
+
+- **$attrs**: attributes / unregistered properties
+- **mixins**: vue presets
+- **props**: properties
+- **slots**: template regions / data
 
 <!--
-Each module provides slots and $attrs as well as a mixin to register props.
+Each Druxt component
 -->
-
----
-image: /images/components.png
-layout: image-right
-position: left
----
-
-# Theming
-
-### Wrapper component options + discovery
-
-![DruxtEntity Component options](/images/devtools-entity-component-options.png)
-
-<!--
-- Druxt modules provide options for the Wrapper component.  
-- Nuxt (>= v2.13) auto imports components.  
-- First available option is used.  
-- Most modules provide a default if no Wrapper component found.  
--->
-
----
-background: https://source.unsplash.com/collection/94734566/1920x1080
-class: text-center
-layout: cover
----
-
-# Prettification
-
-## (Round 2)
-
-<!--
-1. Inspect DruxtEntity with VueDevTools
-2. Show data > component > options.
-3. Create `druxt/entity/node/article/Teaser.vue`
-4. Navigate to node
-5. Explain missing fields and DruxtWrapper
-6. Create `druxt/entity/node/article/Default.vue`
-7. Add `<DruxtView view-id="frontpage" />`
-8. Goto Blocks demo
--->
-
----
-background: /images/druxt-block-region.png
-class: text-center
-layout: cover
----
-
-# Blocks & Regions
-
-## (Round 3)
-
-<!--
-1. Create new `layouts/default.vue`
-2. Add `<DruxtSite theme="bartik" />`
-3. Add customised version of layout
-4. Explain DruxtWrapper / Block decoupling
-5. Add `components/druxt/block/SystemBrandingBlock.vue`
-6. [BACKEND] Show blocks, remove title, tabs, help, actions, etc
-7. Recap
--->
-
-
----
-background: /images/druxt-block-region.png
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="pb-4 text-center">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>DruxtBlocks</h1>
-      <a href="https://blocks.druxtjs.org" target="_blank">blocks.druxtjs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      Provides Drupal blocks and region components.
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/druxt-blocks" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-blocks?label=druxt-blocks" alt="NPM version"></a>
-    </div>
-  </div>
-  <div class="pb-4 pl-8">
-
-```vue
-// DruxtBlock component
-<template>
-  <DruxtBlock :id="drupal_internal__id" />
-</template>
-```
-
-```vue
-// DruxtBlockRegion component
-<template>
-  <DruxtBlockRegion :name="name" :theme="theme" />
-</template>
-```
-
-  </div>
-</div>
-
----
-background: /images/umami-storybook.png
-class: text-center
-layout: cover
----
-
-# Storybook
 
 ---
 id: ek8BlCghwkE
@@ -841,14 +554,16 @@ Druxt provides zero-config, auto-generated Storybook integration.
 -->
 
 ---
-background: /images/umami-storybook.png
 class: text-center
 layout: cover
 ---
 
-# Story time
+# Live demo
+## Theming with Storybook
 
-## (Round 4)
+<div class="mb-10" />
+
+https://gitpod.io#github.com/druxt/quickstart-druxt-site
 
 <!--
 1. Open Storybook > Entity > Node > Article > View displays > Docs
@@ -868,7 +583,19 @@ class: text-center
 layout: cover
 ---
 
-# Reactivity & v-model
+# Single Page Applications
+
+## with Druxt Components
+
+---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# Entity forms
+
+## and reactivity
 
 ---
 class: text-sm
@@ -916,14 +643,16 @@ The source code is all available on github, so be sure to check it out.
 -->
 
 ---
-background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
 ---
 
-# It's time to react
+# Live demo
+## ...
 
-## (Round 5)
+<div class="mb-10" />
+
+https://gitpod.io#github.com/druxt/quickstart-druxt-site
 
 ---
 id: SoWU5PfE7SI
@@ -956,6 +685,169 @@ If
 -->
 
 ---
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+layout: cover
+---
+
+# \#GetInvolved
+
+## discord.druxtjs.org / #druxt @ Drupal Slack
+
+---
+layout: module
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="text-center pb-4">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
+    <div class="mb-2 text-sm">
+      <h1>Druxt<small class="text-sm text-gray-400">.module</small></h1>
+      <a href="https://drupal.org/project/druxt" target="_blank">drupal.org/project/druxt</a>
+    </div>
+  </div>
+  <div class="pl-8 my-auto">
+
+  ### Requires:
+
+  <div class="text-sm py-4 !all:leading-6 !all:list-none">
+
+  - Decoupled Router
+  - JSON:API Menu Items
+  - JSON:API Views
+
+  </div>
+
+  ### Provides:
+
+  <div class="text-sm py-4 !all:leading-6 !all:list-none">
+
+  - Read-only permission for required resources
+  - Block condition plugin bypass
+  - Enables Cross-Origin Resource Sharing (CORS)
+
+  </div>
+  </div>
+</div>
+
+<!--
+@TODO - move this slide to the "Getting started" section.
+
+The Druxt module for Drupal handles all third party requirements, and provides a read-only permission to enable the Nuxxt modules to consume the required data.
+
+The intent is to remove the requirement on this module in favour of a Drupal native solution.
+
+Get in touch if you wish to help!
+-->
+
+---
+layout: section
+---
+
+# Modules
+
+<div class="grid grid-cols-[2fr,2fr] gap-4 ">
+  <div>
+    <h2>DruxtBlocks</h2>
+    <div class="pb-2 text-sm">Blocks and regions</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-blocks" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-blocks?label=druxt-blocks" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtBreadcrumb</h2>
+    <div class="pb-2 text-sm">Route based breadcrumbs</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-breadcrumb" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-breadcrumb?label=druxt-breadcrumb" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtEntity</h2>
+    <div class="pb-2 text-sm">Entities, forms and fields</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-entity" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-entity?label=druxt-entity" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtMenu</h2>
+    <div class="pb-2 text-sm">Menus and menu items</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-menu" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-menu?label=druxt-menu" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtRouter</h2>
+    <div class="pb-2 text-sm">Wildcard router</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtSchema</h2>
+    <div class="pb-2 text-sm">Entity display modes and field formatters</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-schema" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-schema?label=druxt-schema" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtSite</h2>
+    <div class="pb-2 text-sm">Out-of-the-box Decoupled Drupal</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-site" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-site?label=druxt-site" alt="NPM version"></a>
+  </div>
+
+  <div>
+    <h2>DruxtViews</h2>
+    <div class="pb-2 text-sm">Drupal Views pages and blocks</div>
+    <a class="!border-none" href="https://www.npmjs.com/package/druxt-views" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-views?label=druxt-views" alt="NPM version"></a>
+  </div>
+</div>
+
+<!--
+@TODO - Move this under a DruxtSite "features" section
+
+Druxt provides 8 modules,
+each can be used on it's own to target specific Decoupled Drupal functionality, providing Node modules, Vue components, Vuex stores and more.
+
+Some parts of these modules can be used with other javascript libraryes (React), such as the DruxtSchema module.
+
+Custom modules can be added by extending the DruxtModule vue component.
+-->
+
+---
+class: text-sm
+id: R6eM3JQ_pv8
+layout: youtube-right
+---
+
+<img src="/images/logo-umami.svg" class="h-10 mb-10" />
+
+# Umami Parity project
+
+<div class="mb-10" />
+
+<div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
+  <ri-cloud-line class="opacity-50"/>
+  <div><a href="https://demo.druxtjs.org" target="_blank">demo.druxtjs.org</a></div>
+  <ri-cloud-line class="opacity-50"/>
+  <div><a href="https://druxt-umami.netlify.app" target="_blank">druxt-umami.netlify.app</a></div>
+  <ri-artboard-line class="opacity-50"/>
+  <div><a href="http://umami-storybook.druxtjs.org" target="_blank">umami-storybook.druxtjs.org</a></div>
+  <ri-github-line class="opacity-50"/>
+  <div><a href="https://github.com/druxt/demo.druxtjs.org" target="_blank">github.com/druxt/demo.druxtjs.org</a></div>
+  <ri-github-line class="opacity-50"/>
+  <div><a href="https://github.com/druxt/demo-api.druxtjs.org" target="_blank">github.com/druxt/demo-api.druxtjs.org</a></div>
+</div>
+
+<!--
+The Umami installation profiles provides a great example of what Drupal can give you out of the box.
+
+As such, it's the obvious choise to demonstrate what the DruxtSite can give you out of the box.
+
+Let's take a quick look:
+[Demo]
+
+Features:
+- Search layout component
+- Drupal driven entities / contact form
+- Frontend editing
+- Storybook integration
+-->
+
+---
 class: text-center
 layout: cover
 ---
@@ -985,15 +877,19 @@ And to lagoon for providing community hosting for the website.
 -->
 
 ---
+background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 layout: cover
 ---
 
-# Q & A
+# Questions
 
-### [Your question goes here]
+## and answers
 
-<div class="mb-10" />
+---
+class: text-center
+layout: cover
+---
 
 # Find out more
 
