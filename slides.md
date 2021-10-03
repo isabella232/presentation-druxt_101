@@ -514,7 +514,7 @@ Zero-config, auto-generated Storybook integration with Druxt modules.
 
 1. Download @nuxtjs/storybook module
 ```sh
-npm i -D @nuxtjs/storybook
+npm i -D @nuxtjs/storybook postcss@latest
 ```
 
 2. `npx nuxt storybook`
@@ -695,116 +695,50 @@ layout: cover
 ## discord.druxtjs.org / #druxt @ Drupal Slack
 
 ---
-layout: module
+layout: two-cols
 ---
 
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>Druxt<small class="text-sm text-gray-400">.module</small></h1>
-      <a href="https://drupal.org/project/druxt" target="_blank">drupal.org/project/druxt</a>
-    </div>
-  </div>
-  <div class="pl-8 my-auto">
+# Druxt
 
-  ### Requires:
+<div />
 
-  <div class="text-sm py-4 !all:leading-6 !all:list-none">
+Docs:
+- [druxtjs.org](https://druxtjs.org)
+- [druxtjs.org/guide](https://druxtjs.org/guide)
+- [druxtjs.org/guide/CONTRIBUTING](https://druxtjs.org/guide/CONTRIBUTING)
+- [druxtjs.org/modules](https://druxtjs.org/modules)
 
-  - Decoupled Router
-  - JSON:API Menu Items
-  - JSON:API Views
+Mono-repo:
+- [github.com/druxt/druxt.js](https://github.com/druxt/druxt.js)
+- [github.com/druxt/druxt.js/issues](https://github.com/druxt/druxt.js/issues)
 
-  </div>
+Support:
+- [discord.druxtjs.org](https://discord.druxtjs.org)
+- [drupal.org/slack](https://drupal.org/slack) #druxt
 
-  ### Provides:
+<div class="mb-10" />
 
-  <div class="text-sm py-4 !all:leading-6 !all:list-none">
+::right::
+# Drupal
 
-  - Read-only permission for required resources
-  - Block condition plugin bypass
-  - Enables Cross-Origin Resource Sharing (CORS)
+<div />
 
-  </div>
-  </div>
-</div>
+Projects:
+- [drupal.org/project/decoupled_router](https://drupal.org/project/decoupled_router)
+- [drupal.org/project/decoupled_menus_initiative](https://www.drupal.org/project/decoupled_menus_initiative)
+- [drupal.org/project/druxt](https://drupal.org/project/druxt)
+- [drupal.org/project/jsonapi_hypermedia](https://drupal.org/project/jsonapi_hypermedia)
+- [drupal.org/project/jsonapi_menu_items](https://drupal.org/project/jsonapi_menu_items)
+- [drupal.org/project/jsonapi_resources](https://drupal.org/project/jsonapi_resources)
+- [drupal.org/project/jsonapi_views](https://drupal.org/project/jsonapi_views)
+
+Slack:
+- #contenta
+- #decoupled
+- #decoupled-menu-initiative
 
 <!--
-@TODO - move this slide to the "Getting started" section.
-
-The Druxt module for Drupal handles all third party requirements, and provides a read-only permission to enable the Nuxxt modules to consume the required data.
-
-The intent is to remove the requirement on this module in favour of a Drupal native solution.
-
-Get in touch if you wish to help!
--->
-
----
-layout: section
----
-
-# Modules
-
-<div class="grid grid-cols-[2fr,2fr] gap-4 ">
-  <div>
-    <h2>DruxtBlocks</h2>
-    <div class="pb-2 text-sm">Blocks and regions</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-blocks" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-blocks?label=druxt-blocks" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtBreadcrumb</h2>
-    <div class="pb-2 text-sm">Route based breadcrumbs</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-breadcrumb" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-breadcrumb?label=druxt-breadcrumb" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtEntity</h2>
-    <div class="pb-2 text-sm">Entities, forms and fields</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-entity" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-entity?label=druxt-entity" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtMenu</h2>
-    <div class="pb-2 text-sm">Menus and menu items</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-menu" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-menu?label=druxt-menu" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtRouter</h2>
-    <div class="pb-2 text-sm">Wildcard router</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-router" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-router?label=druxt-router" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtSchema</h2>
-    <div class="pb-2 text-sm">Entity display modes and field formatters</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-schema" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-schema?label=druxt-schema" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtSite</h2>
-    <div class="pb-2 text-sm">Out-of-the-box Decoupled Drupal</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-site" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-site?label=druxt-site" alt="NPM version"></a>
-  </div>
-
-  <div>
-    <h2>DruxtViews</h2>
-    <div class="pb-2 text-sm">Drupal Views pages and blocks</div>
-    <a class="!border-none" href="https://www.npmjs.com/package/druxt-views" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt-views?label=druxt-views" alt="NPM version"></a>
-  </div>
-</div>
-
-<!--
-@TODO - Move this under a DruxtSite "features" section
-
-Druxt provides 8 modules,
-each can be used on it's own to target specific Decoupled Drupal functionality, providing Node modules, Vue components, Vuex stores and more.
-
-Some parts of these modules can be used with other javascript libraryes (React), such as the DruxtSchema module.
-
-Custom modules can be added by extending the DruxtModule vue component.
+Both Druxt and general decoupling
 -->
 
 ---
