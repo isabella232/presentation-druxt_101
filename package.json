@@ -1,15 +1,13 @@
 {
+  "name": "druxt-101",
+  "version": "1.0.1",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build",
-    "export": "slidev export"
+    "dev": "slidev --open"
   },
-  "dependencies": {
-    "@slidev/cli": "^0.22.1",
-    "@slidev/client": "^0.6.11",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
-  },
-  "name": "presentation-druxt_101"
+  "devDependencies": {
+    "@slidev/cli": "^0.25.5",
+    "@slidev/theme-default": "^0.21.0"
+  }
 }
