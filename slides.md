@@ -97,11 +97,13 @@ layout: module
 <!--
 What is Druxt?
 
-Druxt is a framework for Frontend developers to build modern user experiences for Drupal.
+Druxt is a full decoupled framework for Frontend developers to build modern user experiences for Drupal using Nuxt.js.
 
-Druxt consumes Content and Configuration from Drupal, allowing you the choice between "Doing it the Drupal way" and "Doing it the 'JS' way", and anywhere in between; Druxt gives freedom to "Do it your way".
+Unlike regular Drupal Decoupling, Druxt consumes both Content and Configuration, allowing for Entities and Forms with Fields and Display modes, Views, Blocks, Regions and more.
 
-Druxt exists because the Drupal frontend experience needs to be better.
+This gives you the ability to both "Do it the Drupal way" and "Do it the 'JS' way", or somewhere in between: "Do it your way".
+
+Druxt exists to provide a better and easier Frontend Experience, because Drupal doesn't do a good enough job on its own.
 -->
 
 ---
@@ -165,18 +167,20 @@ layout: section
 </div>
 
 <!--
-Druxt is Fully decoupled, which means it requires two servers: Drupal for the Backend and Nuxt.js for the Frontend.
+Druxt is Fully decoupled, which means it requires two codebases: Drupal for the Backend and Nuxt.js for the Frontend.
 
-Both Drupal 8 and 9 are supported, and Druxt can be used installed on existing sites and distributions, such as ContentaCMS.
+Both Drupal 8 and 9 are supported, and Druxt can be used installed on existing sites or distributions, such as ContentaCMS.
 
-The Druxt frontend is built on top of Nuxt.js, a a modular Vue.js framework, much like Drupal is a module PHP framework.
+If you're not familiar with Nuxt, it's a modular Vue.js framework, much like Drupal is a modular PHP framework.
 
-Nuxt does all the hard things you don't want to have to do when decoupling or working with javascript:
-- Builds your javascript bundle
+It does all the hard things you don't want to have to do when decoupling or working with javascript:
+- Builds and chunks your javascript bundle
 - Provides extensible page based routing
 - Supports Server Side and Client side rendering as well as Static Site Generation
 
 Nuxt 2 uses Vue 2, but Nuxt 3 is due for a public beta soon which will add support for Vue 3.
+
+Find out more a nuxtjs.org
 -->
 
 ---
@@ -212,7 +216,11 @@ layout: section
 <!--
 Druxt is a big project, and there is a lot to talk about.
 
-In case we are unable to cover everything today, checkout the slides in your own time.
+45 minutes isn't enough time to cover everything here in the detail it deserves. The slides are available for your perusal, which contain links and examples for many of the things I'll be discussing.
+
+I'm also happy to make myself available to anyone who wants to learn more about Druxt, you can find me on the Drupal Slack #druxt channel, the Druxt discord and Twitter.
+
+Let's get started.
 -->
 
 ---
@@ -228,7 +236,7 @@ layout: cover
 <!--
 DruxtSite is the quickest way to get started if you are looking to build a decoupled Site.
 
-It's nearly zero-config and sets up all the required frontend modules for a semi-traditional Drupal site with a Vue.js based theme layer.
+It's nearly zero-config and sets up all the required frontend modules for a semi-traditional Drupal site with a Vue.js based theming system.
 -->
 
 ---
@@ -244,7 +252,8 @@ id: PQcTyIpdHsk
 
 1. Download Drupal
 ```sh
-composer create-project -s dev drupal/recommended-project [DESTINATION]
+composer create-project -s dev \
+drupal/recommended-project [DESTINATION]
 ```
 
 2. Download Druxt module
@@ -299,7 +308,7 @@ npm i druxt-site
 
 3. Configure `nuxt.config.js`
 ```js
-buildModules: ['druxt-site'],
+modules: ['druxt-site'],
 druxt: {
   baseUrl: 'https://example.com',
   site: { theme: 'bartik' },
@@ -334,25 +343,29 @@ layout: cover
 https://gitpod.io#github.com/druxt/quickstart-druxt-site
 
 <!--
-In this demo I'm using the DruxtSite quickstart repository:
-- Drupal is pre-installed and configured using DDev.
-- Nuxt in pre-installed and setup with the DruxtSite module.
+In this demo I'm using the DruxtSite quickstart repository.
 
-I'm running it locally, but it's setup to run on GitPod, so feel free to follow along at home: [Add link to chat]
+I'll be running it locally, but you can follow along using the gitpod link, which I'll drop into the chat now:
 
-Everything is installed and setup, so let's have a look through, and as you can see there's a lot going on:
+The repository is setup with:
+- Drupal pre-installed and configured using DDev.
+- Nuxt pre-installed and setup with the DruxtSite module.
 
-A default Layout is injected into Nuxt to render the DruxtSite component, which renders all the available Block regions for the specified theme.
+Let's take a look:
 
-The theme can be set in the Nuxt configuration.
+You can see straight away that there's a lot going on, but codewise the frontend only consists of a small amount of configuration.
 
-The blocks order and visibility are determined by the Drupal backend: [Show backend]
+So, what's going on?
+
+A default Layout is injected into Nuxt to render the DruxtSite component, which renders all the available Block regions for the specified theme. This can be customised and overridden as needed.
+
+The blocks order and visibility are determined by the Drupal backend, although the order of the Block regions isn't, as Drupal doesn't provide that information out of the box: [Show backend]
 
 The current page is rendered via the Drupal "Main page content" block using the DruxtRouter and the Drupal Decoupled Router module.
 
 Out of the box, using the standard Drupal installation profile, this renders the frontpage view, which you can see here.
 
-Let's go make some content so we can see this better: [ddev drush genc]
+Let's go make some content so we can see this better: [make content]
 
 The layout and settings of the Entity fields are determined by the Display mode, but can be fully overridden in the frontend using DruxtWrapper components.
 -->
@@ -407,9 +420,11 @@ layout: cover
 ## with Wrappers and Slots
 
 <!--
-Druxt components use a DruxtWrapper component theming system.
+Druxt components use a DruxtWrapper component theming system, which uses Props and Slots to allow you to take full control, or use the sane defaults based on the Drupal configuration.
 
-It's a hybrid of Drupal's own theming system, but using Vue single file components instead of Twig files.
+It's a hybrid of Drupal's own theming system, but using Vue single file components instead of Twig, Javascript and CSS files.
+
+And everything is components by design.
 -->
 
 ---
@@ -419,6 +434,14 @@ layout: section
 # Vue crash course
 
 ### Warning: Information overload
+
+<!--
+Given that this is a DrupalCon, I'll assume that not everyone is familiar with Vue.js.
+
+I'll do my best to explain how it all works, but there are far better resources and teachers out there than me.
+
+You can find more about Vue at VueJS.org
+-->
 
 ---
 layout: full
@@ -454,11 +477,11 @@ h2 {
 ```
 
 <!--
-If you're not familiar with Vue files, they are a single file that contains everything for single component; Markup, Javascript and CSS.
+This is an example of a Vue file, it is a single file that contains everything needed for this component; Markup, Javascript and CSS.
 
-This alone, in my opinion, is one of the biggest benefits of decoupling for a Frontend developer.
+This alone, in my opinion, is one of the biggest benefits of decoupling, having everything encapsulated in a single place.
 
-If you're not familiar with Drupals Twig files, CSS and Javascript file structure, that's OK.
+If you've ever spent time digging through Drupal JS behaviours, or heavily nested CSS files, it's worth taking a closer look at Vue.
 -->
 
 ---
@@ -494,7 +517,15 @@ export default {
 - **slots**: template regions / data
 
 <!--
-Each Druxt component
+Vue components have access to $attrs and props, or attributes and properties, as well as mixins and slots, among other things.
+
+In the case of this DruxtEntity Wrapper component, your $attrs and props are the data that the component has retrieved from Drupal via the JSON:API.
+
+Mixins are just helpers to setup your component, and in the case of most Druxt components, they simply register your props.
+
+Slots are template regions that are injected into the component. Druxt components use slots to provide sane defaults; a DruxtEntity wrapper has a slot for each Field, which will render a DruxtField component so you don't need to do it yourself.
+
+The screenshots on the right are from the Vue developer tools, it will show you everything you have access to, and is an invaluable tool.
 -->
 
 ---
@@ -529,13 +560,15 @@ Example:
 - druxt/entity/node/article/Default.vue
 
 <!--
-Nuxt 2.13 added the Components module, which automatically scans the `components/` directory and register your components.
+Nuxt 2.13 added the Components module, which automatically scans the `components/` directory and registers your components, so you don't have to.
 
-Subdirectories are also automatically prefixed.
+Subdirectories are used to generate prefixed, which allows for logical grouping of your components; druxt / entity / node / article / teaser becomes DruxtEntityNodeArticleTeaser
 
-Druxt components prove multiple options for the Wrapper component.
+Druxt components provide multiple options for the Wrapper component, much like Drupals own Template Suggestions.
 
 This allows for a Wrapper per Entity Display mode, or View Display, etc.
+
+You can see the available options by using the Vue developer tools, they are shown on the Druxt component under `data.component.options`
 -->
 
 ---
@@ -572,9 +605,9 @@ npm i -D @nuxtjs/storybook postcss@latest
 <!--
 The @nuxtjs/storybook module allows for Nuxt modules to provide integration with Storybook.
 
-This allows for Druxt modules to provide auto-generated stories that use live data from your Drupal backend, allowing you to test your components against real content.
+This allows for Druxt modules to provide auto-generated stories that use live data from your Drupal backend, allowing you to theme your components using real content.
 
-Enough talk...
+Enough talk, let's do some live theming.
 -->
 
 ---
@@ -589,6 +622,10 @@ layout: cover
 
 https://gitpod.io#github.com/druxt/quickstart-druxt-site
 
+<!--
+Storybook is installed and ready to go in the Quickstart repository, you just need to run `npx nuxt storybook` and give it a few seconds to things up and running.
+-->
+
 ---
 background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
@@ -600,11 +637,11 @@ layout: cover
 ## with Druxt Components
 
 <!--
-While DruxtSite gives you an out of the box site experience, it's still based around "Doing it the Drupal way".
+While DruxtSite gives you an out of the box site experience, it's still mostly based around "Doing it the Drupal way".
 
 But the benefits of Decoupling is being able to do it your own way.
 
-One of the biggest client needs I've seen unfulfilled by Drupal is the ability to make "Campaign pages", or "Single Page Applications".
+One of the biggest client needs I've seen unfulfilled by Drupal is the ability to make "Campaign pages", or "Single Page Applications", that use their Drupal content and branding, but isn't locked into the Drupalisms. There's always something that should be easy, but just can't be done in Drupal.
 -->
 
 ---
@@ -636,9 +673,9 @@ layout: full
 * See https://druxtjs.org/api/components
 
 <!--
-The components that DruxtSite uses can also be used on their own, in Nuxt pages, components, or even in DruxtWrapper components.
+The components that DruxtSite uses can be used on their own, in Nuxt pages, custom components, or even in the DruxtWrapper components.
 
-Different Druxt modules provide different components, you can find more details at Druxtjs.org
+Different Druxt modules provide different components, and can be installed without DruxtSite. You can find more details at Druxtjs.org
 
 Storybook is the best way to get started when building your page, as it allows you to look through the available components and provides you with the required markup.
 -->
@@ -675,9 +712,11 @@ layout: full
 ```
 
 <!--
-When using a Druxt component directly, while the DruxtWrapper theming will still be respected, you are also able to take full control of the default Slot contents using Template injection.
+When using a Druxt component directly, while the DruxtWrapper components will still be respected, you are also able to take full control of the default Slot contents using Template injection.
 
-Think of the Druxt component as a client, it takes the provided props and returns the resulting data to the default template, where you can use it to define the output.
+Think of the Druxt component as a client module; it takes the provided props and returns the resulting data to the default template, where you can use it to define the output.
+
+This example is loading an entity and passing it's props to an `article` object, which is rendering out the markup as required, as well as rendering a nested DruxtEntity for the related Image field entity.
 -->
 
 ---
@@ -703,19 +742,21 @@ layout: cover
 ## and reactivity
 
 ---
-class: text-sm
-id: OL_bRANN6oA
-layout: youtube-right
+image: /images/druxt-entity-form.png
+layout: image-right
 ---
 
-# v-model
+# DruxtEntityForm
 
-<div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
-  <ri-cloud-line class="opacity-50"/>
-  <div><a href="https://nginx.feature-239-editbar.demo-druxtjs-org.au2.amazee.io/en/recipes/vegan-chocolate-and-nut-brownies" target="_blank">nginx.feature-239-editbar.demo-druxtjs-org.au2.amazee.io</a></div>
-  <mdi-github class="opacity-50" />
-  <div><a href="https://github.com/druxt/demo.druxtjs.org/pull/261" target="_blank">druxt/demo.druxtjs.org/pull/261</a></div>
-</div>
+```jsx
+<DruxtEntityForm
+  type="contact_message--feedback_form"
+/>
+```
+
+<div class="mb-10" />
+
+## v-model
 
 ```vue
 <template>
@@ -736,13 +777,35 @@ export default {
 ```
 
 <!--
-[Click play]
+The DruxtEntityForm component is just an extension of the DruxtEntity component. It uses the same Field system, but using configuration from Form Displays.
 
+It also has basic support for POST and PATCH requests, to send data to your Drupal backend.
+
+The `v-model` directive allows for data binding on Vue components. It's reactive, meaning that changes are instantaneously synchronised between components.
+
+This example demonstrates a simple pattern to connect a DruxtEntity and DruxtEntityForm together, allowing for live editing. 
+-->
+
+---
+class: text-sm
+id: OL_bRANN6oA
+layout: youtube-right
+---
+
+# EditBar experiment
+
+<div class="my-10 grid grid-cols-[40px,260px] w-min gap-y-4">
+  <ri-cloud-line class="opacity-50"/>
+  <div><a href="https://nginx.feature-239-editbar.demo-druxtjs-org.au2.amazee.io/en/recipes/vegan-chocolate-and-nut-brownies" target="_blank">nginx.feature-239-editbar.demo-druxtjs-org.au2.amazee.io</a></div>
+  <mdi-github class="opacity-50" />
+  <div><a href="https://github.com/druxt/demo.druxtjs.org/pull/261" target="_blank">druxt/demo.druxtjs.org/pull/261</a></div>
+</div>
+
+
+<!--
 The EditBar is a User Experience experiment to demonstrate one of the many ways to bring editing to the frontend in a Fully Decoupled Drupal site.
 
-Let's take a quick walk through of the site __ BRIAN:
-(BRIAN TO SHARE)
-- This is the first time I've seen a content preview out of Drupal that actually works
+Let's take a look at the demo.
 
 The source code is all available on github, so be sure to check it out.
 -->
