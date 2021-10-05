@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "slidev --open"
+    "dev": "slidev --open",
+    "build": "slidev build"
   },
   "devDependencies": {
     "@slidev/cli": "^0.25.5",
