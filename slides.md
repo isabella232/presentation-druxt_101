@@ -749,11 +749,11 @@ layout: cover
 ---
 
 # Live demo
-## ...
+## Nearly headless blog
 
 <div class="mb-10" />
 
-https://gitpod.io#github.com/druxt/quickstart-druxt-site
+https://gitpod.io/#github.com/Decipher/example-druxt-blog
 
 ---
 id: SoWU5PfE7SI
