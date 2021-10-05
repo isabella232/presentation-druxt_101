@@ -863,6 +863,18 @@ layout: cover
 ## discord.druxtjs.org / #druxt @ Drupal Slack
 
 ---
+layout: section
+---
+
+# Druxt Office Hours
+
+Every Wednesday  
+09:00 - ~17:00 AEDT  
+(22:00 - ~06:00 UTC)
+
+https://discord.druxtjs.org
+
+---
 layout: two-cols
 ---
 
