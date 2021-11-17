@@ -130,7 +130,7 @@ layout: module
 
   - Content management system
   - Open source / Self hostable
-  - Fieldable data modeling
+  - Fieldable data modeling and JSON:API
   - Role based user access control
   - **45000+** modules
 
@@ -190,13 +190,19 @@ layout: module
 <!--
 What is Druxt?
 
-Druxt is a full decoupled framework for Frontend developers to build modern user experiences for Drupal using Nuxt.js.
+Druxt is a framework for building sites and applications that use Drupal as a decoupled CMS and site building system, with a modern javascript frontend.
 
-Unlike regular Drupal Decoupling, Druxt consumes both Content and Configuration, allowing for Entities and Forms with Fields and Display modes, Views, Blocks, Regions and more.
+Druxt is not a Design library.
 
-This gives you the ability to both "Do it the Drupal way" and "Do it the 'JS' way", or somewhere in between: "Do it your way".
+Druxt provides:
+- a JSON:API client
+- a Vuex caching layer
+- A Vue.js theming system
+- A Nuxt module and plugin
 
-Druxt exists to provide a better and easier Frontend Experience, because Drupal doesn't do a good enough job on its own.
+Functional Vue.js components are provided by Druxt modules, which allow integration with specific parts of Drupal; Entities, Fields, Blocks, Views, etc.
+
+Druxt components provide defaults based on Drupal configuration, that can be used or ignored in the Vue.js theme components.
 -->
 
 ---
