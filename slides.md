@@ -1,5 +1,4 @@
 ---
-background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
 info: |
@@ -10,10 +9,17 @@ info: |
 theme: ./theme
 ---
 
-# Druxt 101
+<div class="inline-flex my-auto items-end">
+  <img class="h-50 inline-block mb-5" src="/images/logo-druxt.svg">
+  <div class="text-left ml-5">
+
+# DruxtJS
 
 Fully Decoupled Drupal  
 with JSON:API and Nuxt.js
+
+  </div>
+</div>
 
 [druxt-101.slides.realityloop.com](https://druxt-101.slides.realityloop.com)
 
@@ -39,6 +45,8 @@ image: https://s.gravatar.com/avatar/499831a65f45885a7e1b70ea47c06a58?s=800
   <div><a href="https://www.drupal.org/u/Deciphered" target="_blank">Deciphered</a></div>
   <mdi-github class="opacity-50" />
   <div><a href="https://github.com/decipher" target="_blank">Decipher</a></div>
+  <mdi-nuxt class="opacity-50" />
+  <div><a href="https://druxtjs.org" target="_blank">DruxtJS.org</a></div>
   <mdi-earth class="opacity-50"/>
   <div>Australia</div>
 </div>
@@ -56,103 +64,21 @@ Which is what I'm here to talk about today...
 -->
 
 ---
-layout: module
----
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
-    <div class="mb-2 text-sm">
-      <h1>Druxt</h1>
-      <a href="https://druxtjs.org" target="_blank">druxtjs.org</a><br />
-      <a href="https://www.youtube.com/channel/UC3rybROe6cP9Uly_qQEW-4w" class="no-underline" target="_blank">
-        <mdi-youtube class="inline-block no-underline opacity-50" />
-      </a>
-      <a href="https://twitter.com/druxtjs" class="no-underline" target="_blank">
-        <mdi-twitter class="inline-block no-underline opacity-50" />
-      </a>
-    </div>
-    <div class="opacity-50 mb-2 text-sm">
-      An open source framework for building<br />
-      Fully Decoupled Drupal integrations with Nuxt.js.
-    </div>
-    <div class="text-center">
-      <a class="!border-none" href="https://www.npmjs.com/package/druxt" target="__blank"><img class="h-4 inline mx-0.5" src="https://img.shields.io/npm/v/druxt?label=druxt" alt="NPM version"></a>
-    </div>
-  </div>
-  <div class="!all:leading-12 !all:list-none my-auto">
-
-  - **Content and configuration** in the backend
-  - **Routing and rendering** in the frontend
-  - **Entities**, **Fields**, **Forms** and **Display modes**
-  - **Views** pages and blocks
-  - **Blocks**, **Regions**, **Menus** & more
-  - Auto filtering **JSON:API** client w/**Vuex caching**
-  - **Server side** and **Client side** rendering
-  - **Static site generation**
-
-  </div>
-</div>
-
-<!--
-What is Druxt?
-
-Druxt is a full decoupled framework for Frontend developers to build modern user experiences for Drupal using Nuxt.js.
-
-Unlike regular Drupal Decoupling, Druxt consumes both Content and Configuration, allowing for Entities and Forms with Fields and Display modes, Views, Blocks, Regions and more.
-
-This gives you the ability to both "Do it the Drupal way" and "Do it the 'JS' way", or somewhere in between: "Do it your way".
-
-Druxt exists to provide a better and easier Frontend Experience, because Drupal doesn't do a good enough job on its own.
--->
-
----
 layout: section
 ---
 
-## Backend / L*MP
+# The stack
 
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-20 mb-4 inline-block" src="https://www.drupal.org/files/cta/graphic/drupal%208%20logo%20isolated%20CMYK%2072_1.png">
-    <div class="mb-2 text-sm">
-      <h2>Drupal 8</h2>
-      <a href="https://drupal.org/8" target="_blank">drupal.org/8</a>
-    </div>
-    <div class="opacity-50 mb-2 text-xl">
-      Build something amazing
-    </div>
-    <div class="text-center">
-    </div>
-  </div>
-
+<div class="inline-flex gap-25 my-auto mt-10">
   <div class="my-auto text-center pb-4 pl-8">
-    <img class="h-20 mb-4 inline-block" src="https://www.drupal.org/files/EL_blue_RGB%281%29.png">
+    <img class="h-20 mb-4 inline-block" src="/images/logo-drupal.svg">
     <div class="mb-2 text-sm">
-      <h2>Drupal 9</h2>
-      <a href="https://drupal.org/9" target="_blank">drupal.org/9</a>
-    </div>
-    <div class="opacity-50 mb-2 text-xl">
-      Build the best of the web
-    </div>
-    <div class="text-center">
+      <h2>Drupal</h2>
+      <a href="https://drupal.org" target="_blank">drupal.org</a>
     </div>
   </div>
-</div>
 
-## Frontend / Jamstack
-
-<div class="grid grid-cols-[2fr,2fr] gap-4">
-  <div class="text-center pb-4">
-    <img class="h-15 mb-4 mt-4 inline-block" src="https://vuejs.org/images/logo.svg">
-    <div class="mb-2 text-sm">
-      <h2>Vue.js</h2>
-      <a href="https://vuejs.org" target="_blank">vuejs.org</a>
-    </div>
-    <div class="opacity-50 mb-2 text-xl">
-      The Progressive JavaScript Framework
-    </div>
-  </div>
+  <div class="my-auto text-4xl">+</div>
 
   <div class="my-auto text-center pb-4 pl-8">
     <img class="h-20 mb-4 inline-block" src="/images/logo-nuxt.svg">
@@ -160,8 +86,15 @@ layout: section
       <h2>Nuxt.js</h2>
       <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
     </div>
-    <div class="opacity-50 mb-2 text-xl">
-      The Intuitive Vue Framework
+  </div>
+
+  <div class="my-auto text-4xl">=</div>
+
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-16 mb-9 inline-block" src="/images/logo-druxt.svg">
+    <div class="mb-2 text-sm">
+      <h2>Druxt.js</h2>
+      <a href="https://nuxtjs.org" target="_blank">druxtjs.org</a>
     </div>
   </div>
 </div>
@@ -181,6 +114,95 @@ It does all the hard things you don't want to have to do when decoupling or work
 Nuxt 2 uses Vue 2, but Nuxt 3 is due for a public beta soon which will add support for Vue 3.
 
 Find out more a nuxtjs.org
+-->
+
+---
+layout: module
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-75 mb-4 inline-block" src="/images/logo-drupal.svg">
+  </div>
+  <div class="!all:list-none !all:ml-0 my-auto">
+
+# Drupal
+
+  - Content management system
+  - Open source / Self hostable
+  - Fieldable data modeling and JSON:API
+  - Role based user access control
+  - **45000+** modules
+
+  </div>
+</div>
+
+<!--
+
+-->
+
+---
+layout: module
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-75 mb-4 inline-block" src="/images/logo-nuxt.svg">
+  </div>
+  <div class="!all:list-none !all:ml-0 my-auto">
+
+# Nuxt.js
+
+  - Vue.js frontend framework
+  - Components auto-import
+  - Server and Client side rendering
+  - Static Site generation
+  - **150+** modules
+
+  </div>
+</div>
+
+<!--
+
+-->
+
+---
+layout: module
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
+  </div>
+  <div class="!all:list-none !all:ml-0 my-auto">
+
+# DruxtJS
+
+  - **Content and configuration** from Drupal
+  - **Routing and rendering** in Nuxt.js
+  - **Vue.js** components; Block, Entity, Views, etc
+  - Filterable **JSON:API** client w/**Vuex** caching
+  - **8** modules
+  
+  </div>
+</div>
+
+<!--
+What is Druxt?
+
+Druxt is a framework for building sites and applications that use Drupal as a decoupled CMS and site building system, with a modern javascript frontend.
+
+Druxt is not a Design library.
+
+Druxt provides:
+- a JSON:API client
+- a Vuex caching layer
+- A Vue.js theming system
+- A Nuxt module and plugin
+
+Functional Vue.js components are provided by Druxt modules, which allow integration with specific parts of Drupal; Entities, Fields, Blocks, Views, etc.
+
+Druxt components provide defaults based on Drupal configuration, that can be used or ignored in the Vue.js theme components.
 -->
 
 ---
@@ -237,6 +259,29 @@ layout: cover
 DruxtSite is the quickest way to get started if you are looking to build a decoupled Site.
 
 It's nearly zero-config and sets up all the required frontend modules for a semi-traditional Drupal site with a Vue.js based theming system.
+-->
+
+---
+layout: module
+---
+
+<div class="grid grid-cols-[2fr,2fr] gap-4">
+  <div class="my-auto text-center pb-4 pl-8">
+    <img class="h-50 inline-block" src="/images/logo-druxt.svg">
+  </div>
+  <div class="!all:list-none !all:ml-0 my-auto">
+
+# Druxt Site
+
+  - Nearly **Zero config** setup
+  - Auto of the box, fully decoupled Drupal Site
+  - Drupal **Blocks, Entities, Views** and more
+
+  </div>
+</div>
+
+<!--
+
 -->
 
 ---
